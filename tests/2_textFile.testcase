@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="b904c8fd-d850-4acd-bead-bda4f7c605e3" id="3">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiConnect" guid="69bfc444-41cf-45ba-b4c9-3d885aefce6d" name="UiConnect" testItemId="1" title="UI Connect: textCheck">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">textCheck</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">1850e02d-2433-4181-bf27-b4bb81e0dbe4</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">textCheck</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="privateBrowsingMode"/>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="48afb31e-031f-45d5-b475-515b77b41015" name="UiWithScreen" testItemId="2" title="On account page">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">textCheck</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.account"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Always</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On account page</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="uiTargetUrl"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="3">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="85d20201-d603-48b7-adef-40d10816115f" name="UiDoAction" testItemId="4" title="Download the Download Sample Txt File to Download sample txt file">
+              <arguments>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:pageobject:field?field=downloadSampleTxtFile&amp;pageId=pageobjects.account"/>
+                </argument>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=download"/>
+                </argument>
+                <argument id="value">
+                  <value class="value" valueClass="string">Download sample txt file</value>
+                </argument>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">contents5</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="resultFormat">
+                  <value class="value" valueClass="string">Parsed</value>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="beforeWait">
+                  <value class="uiWait" uri="default"/>
+                </argument>
+                <argument id="afterWait">
+                  <value class="uiWait" uri="default"/>
+                </argument>
+                <argument id="autoRetry">
+                  <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
+                </argument>
+                <argument id="locatorParams"/>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Download the Download Sample Txt File to Download sample txt file</value>
+                </argument>
+                <argument id="parseableContentType"/>
+              </arguments>
+              <generatedParameters>
+                <apiParam group="value" name="resultName" resultNameParameter="true" seq="10001" title="Result Name">
+                  <summary>The name that the result will be stored under.</summary>
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+                <apiParam group="value" name="resultScope" resultScopeParameter="true" seq="10002" title="Result Scope">
+                  <summary>The lifespan of the result.</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Global:Test Run|Folder:Test Folder|Test:Test Case|GroupStep:Group Step|Local:Test Step</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="value" name="resultFormat" seq="10003" title="Result Format">
+                  <summary>The format of the result.</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Text:Text|Parsed:Parsed|Raw:Raw</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="value" name="parseableContentType" seq="10000" title="Content Type">
+                  <summary>The content type of the file.</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.base.api.ParseableContentType</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="uiTargetUrl" title="Web Page">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>

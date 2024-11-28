@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="085b2fc6-a3ae-42aa-8d8f-513ebe3bac15" id="18">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.io.Read" guid="76ae7672-c0d3-4083-8219-27c20fe92b2f" name="Read" testItemId="1" title="Read: C:\\Users\\aniket.pathania\\Downloads\\ABC (1).xlsx=&gt;Contents">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="urlString">
+          <value class="url">C:\\Users\\aniket.pathania\\Downloads\\ABC (1).xlsx</value>
+        </argument>
+        <argument id="contentFormat">
+          <value class="value" valueClass="string">Text</value>
+        </argument>
+        <argument id="contentEncoding">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Contents</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="storeAs">
+          <value class="value" valueClass="string">Text</value>
+        </argument>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource variableName="SourceData" variableScope="Test">
+          <cacheToken>C:/Users/aniket.pathania/Downloads/ABC (1).xlsx;1723016120076</cacheToken>
+          <cachedParameters>
+            <apiParam name="RowNumber"/>
+            <apiParam name="PC"/>
+            <apiParam name="PSC"/>
+            <apiParam name="ListPN"/>
+          </cachedParameters>
+          <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
+            <workbookPath class="value" valueClass="string">C:\\Users\\aniket.pathania\\Downloads\\ABC (1).xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">Sheet1</worksheetName>
+            <valuesRange class="value" valueClass="string">A1:C5</valuesRange>
+          </sourceValue>
+        </parameterValueSource>
+      </parameterValueSources>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="8f1c16a6-890e-44dc-9a29-48aafba79b2b" name="StepGroup" testItemId="8" title="readexcel">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">readexcel</value>
+        </argument>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource variableName="SourceData" variableScope="Test">
+          <cacheToken>C:/Users/aniket.pathania/Downloads/ABC.xlsx;1723016116430</cacheToken>
+          <cachedParameters>
+            <apiParam name="RowNumber"/>
+            <apiParam name="PC"/>
+            <apiParam name="PSC"/>
+            <apiParam name="ListPN"/>
+          </cachedParameters>
+          <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
+            <workbookPath class="value" valueClass="string">C:\\Users\\aniket.pathania\\Downloads\\ABC.xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">Sheet1</worksheetName>
+            <valuesRange class="value" valueClass="string">A1:C5</valuesRange>
+          </sourceValue>
+        </parameterValueSource>
+      </parameterValueSources>
+      <clauses>
+        <clause name="hidden" testItemId="9"/>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="62f0eec4-25de-414c-ad75-d03d820a73f7" name="SetValues" testItemId="6" title="Set Values: date">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">ListPN_Value</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="variable">
+                  <path element="SourceData">
+                    <filter class="index">
+                      <index valueClass="decimal">2</index>
+                    </filter>
+                  </path>
+                  <path element="ListPN"/>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">date</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="variable">
+                  <path element="NOW"/>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" guid="ba25f0d5-1714-4e49-9242-ec0d0e95ff98" name="Write" testItemId="2" title="Write: {SourceData}=&gt;C:\\\\Users\\\\aniket.pathania\\\\Downloads\\\\ABC (1).xlsx">
+      <arguments>
+        <argument id="data">
+          <value class="variable">
+            <path element="SourceData"/>
+          </value>
+        </argument>
+        <argument id="dataUrl">
+          <value class="excelTarget" debug="true" sheetWriteMode="Append">
+            <workbookPath class="value" valueClass="string">C:\\Users\\aniket.pathania\\Downloads\\ABC (1).xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">Sheet1</worksheetName>
+          </value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">C:\\\\Users\\\\aniket.pathania\\\\Downloads\\\\ABC (1).xlsx</value>
+        </argument>
+      </arguments>
+      <generatedParameters/>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" guid="4655805e-be36-422b-8466-3e3ebb233d62" name="Write" testItemId="7" title="Write: {SourceData}=&gt;">
+      <arguments>
+        <argument id="data">
+          <value class="variable">
+            <path element="SourceData"/>
+          </value>
+        </argument>
+        <argument id="dataUrl">
+          <value class="excelTarget">
+            <workbookPath class="value" valueClass="string">workbook.xlsx</workbookPath>
+          </value>
+        </argument>
+        <argument id="targetDescription"/>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<style>
+
+			body {
+				font-family: sans-serif;
+			}
+
+			.TestCaseImplTitle {
+				color: blue;
+				font: 0.85em arial;
+				font-weight: bold;
+			}
+
+			.TestCaseImpl .TestItemTitle {
+				color: blue;
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+				margin-bottom: 0.5em;
+			}
+
+			.TestCaseImpl .TestItemOutcome {
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+			}
+
+			.ApiCallImpl .TestItemTitle{
+				color: blue;
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+				margin-bottom: 0.25em;
+			}
+
+			.ApiCallImpl .TestItemOutcome {
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+			}
+
+			.TestItemOutcome {
+				padding-left: 20px;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				clear: both;
+			}
+			
+			.TestItemOutcome.Successful {
+				color: green;
+				background: url('../../successful_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestItemOutcome.Failed {
+				color: red;
+				background: url('../../failed_16x16.gif') no-repeat 0 0.15em;
+				font-weight: bold;
+			}
+
+			.TestItemOutcome.Skipped {
+				color: orange;
+				background: url('../../skipped_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestOutput {
+				font: 0.9em arial;
+				color: black;
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
+
+			.TestOutput.err {
+				font-weight: bold;
+				color: red;
+			}
+
+			.TestOutput.war {
+				font-weight: bold;
+				color: orange;
+			}
+
+			.ApiCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.TestCaseCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body><div id='detail-body'>
+	<div style='float: right;'><img src='../..//provar_logo_400x100.png' height='50'/></div>
+<h2><img src='../..//testcase_16x16.png' style='height: 24; padding-top: 4px;'/> Main.testcase</h2>
+<div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:32 (00:00.000)</span></div>Start of Test Case Main.testcase</div><div class='TestCaseCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:32 (00:00.004)</span></div>Start of Test Case Call Call Sub</div><div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:32 (00:00.005)</span></div>Start of Test Case Sub</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:32 (00:00.005)</span></div>Start of Test Step Salesforce Connect: SalesForce (Test)</div><div class='TestOutput inf'>Connecting to Salesforce as SalesForce</div><div class='TestOutput off'>Successfully connected to Salesforce as SalesForce</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:38 (00:05.763)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:38 (00:05.764)</span></div>Start of Test Step Set Values: a</div><div class='TestOutput inf'>Setting value a to 10</div><div class='TestOutput off'>Successfully set a to 10</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:38 (00:05.768)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:38 (00:05.768)</span></div>Start of Test Step SOQL Query: select Id&lt;br/&gt;    ,Name from Account=&gt;AccountRows</div><div class='TestOutput inf'>Reading a Salesforce object.  Connection Name: SalesForce, Query: select Id&lt;br/&gt;    ,Name from Account</div><div class='TestOutput inf'>Query successful.  Row Count: 26.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:38 (00:05.895)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:38 (00:05.895)</span></div>Start of Test Step Set Values: </div><div class='TestOutput inf'>Setting value  to </div><div class='TestOutput war'>No value name is specified for value number 1</div><div class='TestOutput war'>Warning - setting value  to </div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:38 (00:05.900)</span></div>Test Step successful.</div></div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:38 (00:05.900)</span></div>Test Case successful.</div></div><div class='TestOutput inf'>Handling managed resource.  Name: SalesForce</div><div class='TestOutput off'>Salesforce Connection handled successfully.  Name: SalesForce</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:38 (00:05.902)</span></div>Test Case Call successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:38 (00:05.902)</span></div>Start of Test Step Set Values: b</div><div class='TestOutput inf'>Setting value b to 10</div><div class='TestOutput off'>Successfully set b to 10</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:38 (00:05.906)</span></div>Test Step successful.</div></div><div class='TestOutput inf'>Committing updates for SQLServer connection for CommitIfSuccessful setting because Test Case was successful.  Connection: DbConnection</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:23:38 (00:05.907)</span></div>Test Case successful.</div></div>
+	</div></body>
+</html>

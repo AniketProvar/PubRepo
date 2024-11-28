@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<style>
+
+			body {
+				font-family: sans-serif;
+			}
+
+			.TestCaseImplTitle {
+				color: blue;
+				font: 0.85em arial;
+				font-weight: bold;
+			}
+
+			.TestCaseImpl .TestItemTitle {
+				color: blue;
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+				margin-bottom: 0.5em;
+			}
+
+			.TestCaseImpl .TestItemOutcome {
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+			}
+
+			.ApiCallImpl .TestItemTitle{
+				color: blue;
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+				margin-bottom: 0.25em;
+			}
+
+			.ApiCallImpl .TestItemOutcome {
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+			}
+
+			.TestItemOutcome {
+				padding-left: 20px;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				clear: both;
+			}
+			
+			.TestItemOutcome.Successful {
+				color: green;
+				background: url('../../successful_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestItemOutcome.Failed {
+				color: red;
+				background: url('../../failed_16x16.gif') no-repeat 0 0.15em;
+				font-weight: bold;
+			}
+
+			.TestItemOutcome.Skipped {
+				color: orange;
+				background: url('../../skipped_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestOutput {
+				font: 0.9em arial;
+				color: black;
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
+
+			.TestOutput.err {
+				font-weight: bold;
+				color: red;
+			}
+
+			.TestOutput.war {
+				font-weight: bold;
+				color: orange;
+			}
+
+			.ApiCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.TestCaseCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body><div id='detail-body'>
+	<div style='float: right;'><img src='../..//provar_logo_400x100.png' height='50'/></div>
+<h2><img src='../..//testcase_16x16.png' style='height: 24; padding-top: 4px;'/> DB.testcase</h2>
+<div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:54 (00:00.000)</span></div>Start of Test Case DB.testcase</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:54 (00:00.005)</span></div>Start of Test Step DB Connect: DbConnection</div><div class='TestOutput inf'>Opening DB Connection.  Connection Name: DB, URL: jdbc:mysql://localhost:3306/world?schemaName=world&user=root&password={password}, Auto Commit: false, CommitBehaviour: CommitIfSuccessful</div><div class='TestOutput inf'>DB Connection opened successfully.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:55 (00:00.219)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:55 (00:00.221)</span></div>Start of Test Step DB Read: DbConnection.city=&gt;DBRead</div><div class='TestOutput inf'>Start of DB Read.  Connection Name: DbConnection, table: city</div><div class='TestOutput inf'>Preparing SQL: SELECT  FROM "city" WHERE "ID" = ? AND "Name" = ?</div><div class='TestOutput inf'>==Binding where value=&gt; ID = 1 (java.math.BigDecimal)</div><div class='TestOutput inf'>==Binding where value=&gt; Name = Kabul (java.lang.String)</div><div class='TestOutput inf'>Executing statement ...</div><div class='TestOutput sev'>Error executing DB Read.  Connection Name: DB, Table Name: city, cause: [SQLSyntaxErrorException: (conn=27) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM "city" WHERE "ID" = 1 AND "Name" = 'Kabul'' at line 1, SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM "city" WHERE "ID" = 1 AND "Name" = 'Kabul'' at line 1&lt;br/&gt;Query is: SELECT  FROM "city" WHERE "ID" = ? AND "Name" = ?, parameters [1,'Kabul']&lt;br/&gt;java thread: Thread-90]</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:55 (00:00.297)</span></div>Test Step failed.</div></div><div class='TestOutput inf'>Rolling back updates for SQLServer connection for CommitIfSuccessful setting because Test Case failed.  Connection: DbConnection</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:55 (00:00.304)</span></div>Test Case failed.</div></div>
+	</div></body>
+</html>

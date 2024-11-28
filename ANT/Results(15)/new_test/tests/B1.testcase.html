@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<style>
+
+			body {
+				font-family: sans-serif;
+			}
+
+			.TestCaseImplTitle {
+				color: blue;
+				font: 0.85em arial;
+				font-weight: bold;
+			}
+
+			.TestCaseImpl .TestItemTitle {
+				color: blue;
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+				margin-bottom: 0.5em;
+			}
+
+			.TestCaseImpl .TestItemOutcome {
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+			}
+
+			.ApiCallImpl .TestItemTitle{
+				color: blue;
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+				margin-bottom: 0.25em;
+			}
+
+			.ApiCallImpl .TestItemOutcome {
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+			}
+
+			.TestItemOutcome {
+				padding-left: 20px;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				clear: both;
+			}
+			
+			.TestItemOutcome.Successful {
+				color: green;
+				background: url('../../successful_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestItemOutcome.Failed {
+				color: red;
+				background: url('../../failed_16x16.gif') no-repeat 0 0.15em;
+				font-weight: bold;
+			}
+
+			.TestItemOutcome.Skipped {
+				color: orange;
+				background: url('../../skipped_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestOutput {
+				font: 0.9em arial;
+				color: black;
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
+
+			.TestOutput.err {
+				font-weight: bold;
+				color: red;
+			}
+
+			.TestOutput.war {
+				font-weight: bold;
+				color: orange;
+			}
+
+			.ApiCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.TestCaseCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body><div id='detail-body'>
+	<div style='float: right;'><img src='../..//provar_logo_400x100.png' height='50'/></div>
+<h2><img src='../..//testcase_16x16.png' style='height: 24; padding-top: 4px;'/> B1.testcase</h2>
+<div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:12:57 (00:00.000)</span></div>Start of Test Case B1.testcase</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:12:57 (00:00.007)</span></div>Start of Test Step Salesforce Connect: SalesForce (Test)</div><div class='TestOutput inf'>Connecting to Salesforce as SalesForce</div><div class='TestOutput off'>Successfully connected to Salesforce as SalesForce</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:04 (00:07.003)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:04 (00:07.004)</span></div>Start of Test Step On SF Account New screen</div><div class='TestOutput inf'>Start of With Screen.  Connection Name: SalesForce, target: sf:ui:target?object=Account&action=New&noOverride=true</div><div class='TestOutput inf'>Opening Chrome webdriver instance to https://login.salesforce.com/</div><div class='TestOutput off'>Successfully opened Chrome webdriver to https://login.salesforce.com/</div><div class='TestOutput inf'>Opening Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Opening Salesforce page.  Object: Account, RelatedList: null, Action: New, Page URL: /lightning/o/001/list, Current URL: chrome://new-tab-page/</div><div class='TestOutput inf'>Opening Salesforce user home page</div><div class='TestOutput off'>Successfully opened user home page</div><div class='TestOutput inf'>Clicking the New Button</div><div class='TestOutput inf'>Find action link element using xpath: (//*[contains(@class, 'active') and ( (self::div and contains(@class, 'oneContent')) or (self::section and ((contains(@class, 'oneConsoleTab') and ancestor::div[contains(@class, 'active') and (contains(@class, 'oneWorkspace') or contains(@class, 'navexWorkspace')) and not(contains(@class, 'hasPinnedRegionTemplate') and contains(@class, 'hasActiveSubtab'))]) or (contains(@class, 'tabContent') and ancestor::div[contains(@class, 'wsTabset') and not(contains(@class, 'wsTabBarHidden'))] and ancestor::div[contains(@class, 'active') and (contains(@class, 'oneWorkspace') or contains(@class, 'navexWorkspace')) and contains(@class, 'hasPinnedRegionTemplate') and contains(@class, 'hasActiveSubtab')]))) )]//div[contains(@class, 'forceListViewManager')]//ul[contains(@class, 'oneActionsRibbon')] | //div[contains(@class, 'forceActionsDropDownMenuList') and contains(@class, ' visible')])//a[contains(@data-aura-rendered-by, '727:0')]</div><div class='TestOutput inf'>Clicking WebElement.  WebElement [tag: a, text: New, href: javascript:void(0);]</div><div class='TestOutput sev'>Dialog not loaded in 10secs</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:37 (00:40.169)</span></div>Start of Test Step Set the Account Name field to 12AP</div><div class='TestOutput inf'>Start of Interact.  Connection: SalesForce, Locator: ui:locator?name=Name&binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26field%3DName, before wait: default, after wait: default, auto retry: ui:wait:autoRetry:timeout=10</div><div class='TestOutput inf'>Locator: ui:locator?name=Name&binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26field%3DName</div><div class='TestOutput inf'>Interaction: ui:interaction?name=set</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&uid=172707380448368815&backgroundContext=%2Flightning%2Fo%2FAccount%2Flist%3FfilterName%3D__Recent</div><div class='TestOutput inf'>Interaction: ui:interaction?name=set</div><div class='TestOutput inf'>Finding field placehoder using xpath: //div[contains(@class, 'open') and (contains(@class, 'forceModal') or contains(@class, 'uiModal')) and (contains(@class, 'active') or following-sibling::div[contains(@class, 'forceFormPageError')])][last()]//*[contains(@class, 'forceDetailPanel') or contains(@class, 'detail-panel-root')]//*[(self::records-record-layout-section) or ((self::section or self::div) and contains(@class,'forcePageBlockSection '))][1]//*[((self::label and (contains(@class,'uiLabel') or contains(@class,'slds-form-element__label')) and not(contains(@class, 'hide '))) or (self::span and (contains(@class,'inputLabel') or contains(@class,'slds-form-element__label'))) or (self::div and contains(@class,'test-id__field-label-container')) or (self::lightning-grouped-combobox and contains(@class, 'forceTextEnumLookup')) or (self::div and contains(@class, 'lightningInputRichText') or self::lightning-input-rich-text)) and (.//text()[normalize-space()='Account Name'] or .//text() = 'Account Name')]/ancestor::div[1]</div><div class='TestOutput inf'>Find field using relative xpath: .//input</div><div class='TestOutput inf'>Waiting for element to be present.  Timeout(seconds): 10</div><div class='TestOutput inf'>Doing before wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Found element: [[[org.openqa.selenium.remote.RemoteWebElement@cad3b3d0 -&gt; unknown locator]] -&gt; xpath: .//input]</div><div class='TestOutput inf'>Got webElement.  tagName: INPUT, id: input-189, type: text, class: slds-input</div><div class='TestOutput inf'>Typing value.  tagName: INPUT, type: text, value: 12AP, blur: false</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:40 (00:43.281)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:40 (00:43.283)</span></div>Start of Test Step Set the Account Number field to 7073820323</div><div class='TestOutput inf'>Start of Interact.  Connection: SalesForce, Locator: ui:locator?name=AccountNumber&binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26field%3DAccountNumber, before wait: default, after wait: default, auto retry: ui:wait:autoRetry:timeout=10</div><div class='TestOutput inf'>Locator: ui:locator?name=AccountNumber&binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26field%3DAccountNumber</div><div class='TestOutput inf'>Interaction: ui:interaction?name=set</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&uid=172707380448368815&backgroundContext=%2Flightning%2Fo%2FAccount%2Flist%3FfilterName%3D__Recent</div><div class='TestOutput inf'>Interaction: ui:interaction?name=set</div><div class='TestOutput inf'>Finding field placehoder using xpath: //div[contains(@class, 'open') and (contains(@class, 'forceModal') or contains(@class, 'uiModal')) and (contains(@class, 'active') or following-sibling::div[contains(@class, 'forceFormPageError')])][last()]//*[contains(@class, 'forceDetailPanel') or contains(@class, 'detail-panel-root')]//*[(self::records-record-layout-section) or ((self::section or self::div) and contains(@class,'forcePageBlockSection '))][1]//*[((self::label and (contains(@class,'uiLabel') or contains(@class,'slds-form-element__label')) and not(contains(@class, 'hide '))) or (self::span and (contains(@class,'inputLabel') or contains(@class,'slds-form-element__label'))) or (self::div and contains(@class,'test-id__field-label-container')) or (self::lightning-grouped-combobox and contains(@class, 'forceTextEnumLookup')) or (self::div and contains(@class, 'lightningInputRichText') or self::lightning-input-rich-text)) and (.//text()[normalize-space()='Account Number'] or .//text() = 'Account Number')]/ancestor::div[1]</div><div class='TestOutput inf'>Find field using relative xpath: .//input</div><div class='TestOutput inf'>Waiting for element to be present.  Timeout(seconds): 10</div><div class='TestOutput inf'>Doing before wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Found element: [[[org.openqa.selenium.remote.RemoteWebElement@cad3b3d4 -&gt; unknown locator]] -&gt; xpath: .//input]</div><div class='TestOutput inf'>Got webElement.  tagName: INPUT, id: input-203, type: text, class: slds-input</div><div class='TestOutput inf'>Typing value.  tagName: INPUT, type: text, value: 7073820323, blur: false</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:42 (00:45.691)</span></div>Test Step successful.</div></div><div class='TestOutput inf'>All Sub-Test Steps were successful.</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&uid=172707380448368815&backgroundContext=%2Flightning%2Fo%2FAccount%2Flist%3FfilterName%3D__Recent</div><div class='TestOutput inf'>Injecting script to get created object ID from aura component</div><div class='TestOutput war'>Some toast message(s) are still open and might cause inconsistent issues in execution.</div><div class='TestOutput inf'>Fetching created Id from URL</div><div class='TestOutput inf'>Reattempting for the createdId</div><div class='TestOutput inf'>Reattempting for the createdId</div><div class='TestOutput inf'>Reattempting for the createdId</div><div class='TestOutput sum'>Storing created Salesforce Object ID.  Result Name: accountId, created ID: &amp;a href='sf:object?object=Account&connection=SalesForce'&gt;null&amp;/a&gt;, location: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&uid=172707380448368815&backgroundContext=%2Flightning%2Fo%2FAccount%2Flist%3FfilterName%3D__Recent</div><div class='TestOutput inf'>Closing Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Main window reselected.  Window: main</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/o/Account/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&uid=172707380448368815&backgroundContext=%2Flightning%2Fo%2FAccount%2Flist%3FfilterName%3D__Recent</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:52 (00:55.337)</span></div>Test Step successful.</div></div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:52 (00:55.340)</span></div>Test Case successful.</div></div><div class='TestOutput inf'>Handling managed resource.  Name: SalesForce</div><div class='TestOutput off'>Salesforce Connection handled successfully.  Name: SalesForce</div>
+	</div></body>
+</html>

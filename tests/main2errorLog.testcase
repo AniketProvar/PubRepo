@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="0058fefc-aa6a-42f5-9cb0-00ea0a46f6bd" id="5">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Fail" guid="9878e819-b2d6-4360-9c7b-96ee187ca1bf" name="Fail" testItemId="1" title="Fail Test: 2fail">
+      <tags/>
+      <arguments>
+        <argument id="message">
+          <value class="value" valueClass="string">2fail</value>
+        </argument>
+      </arguments>
+      <expectedExceptions>
+        <expectedException comparisonType="Contains" title="f">
+          <assertionValue class="value" valueClass="string">2fail</assertionValue>
+        </expectedException>
+      </expectedExceptions>
+    </apiCall>
+    <caseCall guid="cd461ebc-3997-4e16-bb2b-cc56ff2cdad8" testCaseId="fc3fa2f1-8048-4c9e-91a5-c949c1a1c397" testCasePath="tests/errorLog.testcase" testItemId="3">
+      <outputArguments>
+        <outputArgument id="d">
+          <name class="value" valueClass="string">d</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+  </steps>
+</testCase>

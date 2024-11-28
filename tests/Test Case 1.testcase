@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="c74411d1-3be6-40d0-b44d-fde63208c36b" id="5">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="62a6faf2-05cb-491d-a259-3a3214b8522e" name="StepGroup" testItemId="1" title="SetValues">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">SetValues</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="2">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="67d82567-6b36-4be7-aa2d-7aa18d78b783" name="SetValues" testItemId="3" title="Set Values: ">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">b</value>
+                      </namedValue>
+                      <namedValue name="value"/>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath"/>
+                      <namedValue name="value"/>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.WaitFor" guid="d3039448-d991-49a6-b1f3-663d5da670a3" name="WaitFor" testItemId="7" title="Wait For: =&gt;{30}">
+              <tags>
+                <string>disabled</string>
+              </tags>
+              <arguments>
+                <argument id="condition"/>
+                <argument id="testAtStart"/>
+                <argument id="maxIterations">
+                  <value class="value" valueClass="decimal">5</value>
+                </argument>
+                <argument id="sleepSecs">
+                  <value class="value" valueClass="decimal">30</value>
+                </argument>
+                <argument id="continueOnFailure"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="8"/>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" guid="3b1d8ab3-e0b6-4c9b-874f-733c5d635838" name="Break" testItemId="4" title="Break"/>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Fail" guid="9b69f89e-71d1-49c9-860e-5f14a8da3254" name="Fail" testItemId="5" title="Fail Test">
+      <arguments>
+        <argument id="message"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" guid="be34ff6f-81bb-4a84-a041-f2762b732e27" name="Sleep" testItemId="6" title="Sleep for {10} seconds">
+      <arguments>
+        <argument id="sleepSecs">
+          <value class="value" valueClass="decimal">10</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

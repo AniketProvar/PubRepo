@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="new_test/tests" tests="1" failures="0" skipped="0" hostname="687f9eba1a7d" time="162.199" timestamp="Thu Sep 26 11:21:08 GMT 2024">
+	<properties>
+		<property name="excludeCallableTestCases" value="true"/>
+		<property name="testEnvironment" value=""/>
+		<property name="pluginOutputLevel" value="WARNING"/>
+		<property name="projectPath" value="/home/Test_Project"/>
+		<property name="salesforceMetadataCache" value="Reuse"/>
+		<property name="resultsPathDisposition" value="Replace"/>
+		<property name="testOutputLevel" value="INFO"/>
+		<property name="webBrowserType" value="Chrome"/>
+		<property name="resultsPath" value="/home/Test_Project/DOCKER/Results"/>
+		<property name="webBrowserConfiguration" value="Full Screen"/>
+		<property name="projectCachePath" value="/home/Test_Project/../../.provarCaches"/>
+	</properties>
+	<testcase classname="tests/111.testcase" name="111.testcase" time="158.424">
+	</testcase>
+</testsuite>

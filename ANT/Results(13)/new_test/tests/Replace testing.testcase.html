@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<style>
+
+			body {
+				font-family: sans-serif;
+			}
+
+			.TestCaseImplTitle {
+				color: blue;
+				font: 0.85em arial;
+				font-weight: bold;
+			}
+
+			.TestCaseImpl .TestItemTitle {
+				color: blue;
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+				margin-bottom: 0.5em;
+			}
+
+			.TestCaseImpl .TestItemOutcome {
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+			}
+
+			.ApiCallImpl .TestItemTitle{
+				color: blue;
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+				margin-bottom: 0.25em;
+			}
+
+			.ApiCallImpl .TestItemOutcome {
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+			}
+
+			.TestItemOutcome {
+				padding-left: 20px;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				clear: both;
+			}
+			
+			.TestItemOutcome.Successful {
+				color: green;
+				background: url('../../successful_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestItemOutcome.Failed {
+				color: red;
+				background: url('../../failed_16x16.gif') no-repeat 0 0.15em;
+				font-weight: bold;
+			}
+
+			.TestItemOutcome.Skipped {
+				color: orange;
+				background: url('../../skipped_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestOutput {
+				font: 0.9em arial;
+				color: black;
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
+
+			.TestOutput.err {
+				font-weight: bold;
+				color: red;
+			}
+
+			.TestOutput.war {
+				font-weight: bold;
+				color: orange;
+			}
+
+			.ApiCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.TestCaseCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body><div id='detail-body'>
+	<div style='float: right;'><img src='../..//provar_logo_400x100.png' height='50'/></div>
+<h2><img src='../..//testcase_16x16.png' style='height: 24; padding-top: 4px;'/> Replace testing.testcase</h2>
+<div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:05:19 (00:00.000)</span></div>Start of Test Case Replace testing.testcase</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:05:19 (00:00.000)</span></div>Start of Test Step Salesforce Connect: SalesForce (Test)</div><div class='TestOutput inf'>Connecting to Salesforce as SalesForce</div><div class='TestOutput off'>Successfully connected to Salesforce as SalesForce</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:05:26 (00:07.247)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step On SF Account View screen SKIPPED</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:05:26 (00:07.247)</span></div>Start of Test Step On SF Account View screen</div><div class='TestOutput inf'>Start of With Screen.  Connection Name: SalesForce, target: sf:ui:target?object=Account&action=View&noOverride=true</div><div class='TestOutput inf'>Opening Chrome webdriver instance to https://login.salesforce.com/</div><div class='TestOutput off'>Successfully opened Chrome webdriver to https://login.salesforce.com/</div><div class='TestOutput inf'>Opening Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Opening Salesforce page.  Object: Account, RelatedList: null, Action: View, Page URL: /lightning/r/001dM00000HZCN2QAP/view, Current URL: chrome://new-tab-page/</div><div class='TestOutput inf'>Opening Salesforce user home page</div><div class='TestOutput inf'>Clicking WebElement.  WebElement [tag: input, text: Log In]</div><div class='TestOutput off'>Successfully opened user home page</div><div class='TestOutput inf'>Activating detailTab tab</div><div class='TestOutput inf'>Clicking WebElement using Javascript Click.  WebElement: WebElement [tag: a, text: Details, href: javascript:void(0)]</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:05:46 (00:27.131)</span></div>Start of Test Step UI Assert</div><div class='TestOutput inf'>Start of UiAssert.  Connection: SalesForce</div><div class='TestOutput inf'>Resolving field AccountNumber</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/r/Account/001dM00000HZCN2QAP/view</div><div class='TestOutput inf'>Activating detailTab tab</div><div class='TestOutput inf'>Clicking WebElement using Javascript Click.  WebElement: WebElement [tag: a, text: Details, href: javascript:void(0)]</div><div class='TestOutput inf'>Finding field placehoder using xpath: (//*[contains(@class, 'active') and ( (self::div and contains(@class, 'oneContent')) or (self::section and ((contains(@class, 'oneConsoleTab') and ancestor::div[contains(@class, 'active') and (contains(@class, 'oneWorkspace') or contains(@class, 'navexWorkspace')) and not(contains(@class, 'hasPinnedRegionTemplate') and contains(@class, 'hasActiveSubtab'))]) or (contains(@class, 'tabContent') and ancestor::div[contains(@class, 'wsTabset') and not(contains(@class, 'wsTabBarHidden'))] and ancestor::div[contains(@class, 'active') and (contains(@class, 'oneWorkspace') or contains(@class, 'navexWorkspace')) and contains(@class, 'hasPinnedRegionTemplate') and contains(@class, 'hasActiveSubtab')]))) )]//*[contains(@data-component-id, 'force_detailPanel')]//*[(self::records-record-layout-section) or (self::div and (contains(@class, 'forcePageBlockSectionView')))])[1]//div[(contains(@class,'labelCol') or contains(@class,'field-label-container')) and (span/text()[normalize-space()='Account Number' or (.) ='Account Number'])]/ancestor::div[1]//*[(self::div and contains(@class,'dataCol')) or (self::span and contains(@class,'test-id__field-value'))]</div><div class='TestOutput inf'>Waiting for element to be present.  Timeout(seconds): 10</div><div class='TestOutput inf'>Finding field elements using relativePath: .//lightning-formatted-text</div><div class='TestOutput inf'>Waiting for element to be present.  Timeout(seconds): 10</div><div class='TestOutput inf'>Doing before wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Found element: [[[[ChromeDriver$$EnhancerByCGLIB$$dace278c: chrome on windows (1aec0d8c0bd9b12ac199002f5b0aa45e)] -&gt; xpath: (//*[contains(@class, 'active') and ( (self::div and contains(@class, 'oneContent')) or (self::section and ((contains(@class, 'oneConsoleTab') and ancestor::div[contains(@class, 'active') and (contains(@class, 'oneWorkspace') or contains(@class, 'navexWorkspace')) and not(contains(@class, 'hasPinnedRegionTemplate') and contains(@class, 'hasActiveSubtab'))]) or (contains(@class, 'tabContent') and ancestor::div[contains(@class, 'wsTabset') and not(contains(@class, 'wsTabBarHidden'))] and ancestor::div[contains(@class, 'active') and (contains(@class, 'oneWorkspace') or contains(@class, 'navexWorkspace')) and contains(@class, 'hasPinnedRegionTemplate') and contains(@class, 'hasActiveSubtab')]))) )]//*[contains(@data-component-id, 'force_detailPanel')]//*[(self::records-record-layout-section) or (self::div and (contains(@class, 'forcePageBlockSectionView')))])[1]//div[(contains(@class,'labelCol') or contains(@class,'field-label-container')) and (span/text()[normalize-space()='Account Number' or (.) ='Account Number'])]/ancestor::div[1]//*[(self::div and contains(@class,'dataCol')) or (self::span and contains(@class,'test-id__field-value'))]]] -&gt; xpath: .//lightning-formatted-text]</div><div class='TestOutput inf'>Asserting field attributes: AccountNumber</div><div class='TestOutput inf'>Asserting Attribute: value to CC978213</div><div class='TestOutput inf'>{ASSERTION_OK}Assertion successful.CC978213 EqualTo CC978213</div><div class='TestOutput inf'>Reading Attribute: message</div><div class='TestOutput inf'>Object read successfully.  Result Name: Values</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:05:50 (00:30.620)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:05:50 (00:30.620)</span></div>Start of Test Step Replace: {Values}=&gt;=&gt;replacement</div><div class='TestOutput sev'>Text replacement not supported for Value Type - returning input unchanged.  Value Type: com.provar.core.model.base.java.NamedValueListValueImpl</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:05:50 (00:30.641)</span></div>Test Step failed.</div></div><div class='TestOutput sev'>One or more Sub-Test Steps failed.</div><div class='TestOutput inf'>Closing Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Main window reselected.  Window: main</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/r/Account/001dM00000HZCN2QAP/view</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:05:52 (00:32.701)</span></div>Test Step failed.</div></div><div class='TestOutput inf'>Rolling back updates for SQLServer connection for CommitIfSuccessful setting because Test Case failed.  Connection: DbConnection</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:05:52 (00:32.701)</span></div>Test Case failed.</div></div><div class='TestOutput inf'>Handling managed resource.  Name: SalesForce</div><div class='TestOutput off'>Salesforce Connection handled successfully.  Name: SalesForce</div>
+	</div></body>
+</html>

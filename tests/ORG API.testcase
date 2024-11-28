@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="fe7629e4-0855-4def-a8e0-83c89ff24e1a" id="5">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="9669eeac-1350-489a-9081-9bcc11c92036" name="ApexConnect" testItemId="1" title="Salesforce Connect: SalesForce (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">af2db824-31a2-4483-be7a-5fa76cf39100</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">LightningSales</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="5566af14-ad91-4a59-b25a-16aebd620f18" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="2" title="Create Object: Account=&gt;AccountId">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">Account</value>
+        </argument>
+        <argument id="resultIdName">
+          <value class="value" valueClass="string">AccountId</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="assignmentRuleId"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="MasterRecordId">
+          <value class="value" valueClass="string">173199425853892218</value>
+        </argument>
+        <argument id="Name">
+          <value class="value" valueClass="string">Pathania</value>
+        </argument>
+        <argument id="Type">
+          <value class="value" valueClass="string">Customer - Channel</value>
+        </argument>
+        <argument id="BillingCity">
+          <value class="value" valueClass="string">Pathankot</value>
+        </argument>
+        <argument id="BillingState">
+          <value class="value" valueClass="string">Punjab</value>
+        </argument>
+        <argument id="BillingCountry">
+          <value class="value" valueClass="string">India</value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">SalesForce</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Account</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=MasterRecordId" name="MasterRecordId" title="MasterRecordId"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Name" name="Name" title="Name"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Type" name="Type" title="Type"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingCity" name="BillingCity" title="BillingCity"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingState" name="BillingState" title="BillingState"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingCountry" name="BillingCountry" title="BillingCountry"/>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="4449ac79-5937-4252-8f9e-1d695425e5da" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="3" title="Create Object: Account=&gt;AccountId">
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">Account</value>
+        </argument>
+        <argument id="resultIdName">
+          <value class="value" valueClass="string">AccountId</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="assignmentRuleId"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="Name">
+          <value class="value" valueClass="string">Pathania</value>
+        </argument>
+        <argument id="BillingCity">
+          <value class="value" valueClass="string">Pathankot</value>
+        </argument>
+        <argument id="BillingState">
+          <value class="value" valueClass="string">Punjab</value>
+        </argument>
+        <argument id="BillingCountry">
+          <value class="value" valueClass="string">India</value>
+        </argument>
+        <argument id="Fax">
+          <value class="value" valueClass="string">1234567</value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">SalesForce</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Account</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Name" name="Name" title="Name"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingCity" name="BillingCity" title="BillingCity"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingState" name="BillingState" title="BillingState"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingCountry" name="BillingCountry" title="BillingCountry"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Fax" name="Fax" title="Fax"/>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>

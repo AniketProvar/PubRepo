@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="b3839260-9141-4415-a09f-fc50ebdee9dc" id="20">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.io.Read" guid="0c481971-98df-4a71-b2e4-b0bf75f8608f" name="Read" testItemId="1" title="Read: C:\\Users\\aniket.pathania\\Downloads\\ABC.xlsx=&gt;Contents">
+      <arguments>
+        <argument id="urlString">
+          <value class="url">C:\\Users\\aniket.pathania\\Downloads\\ABC.xlsx</value>
+        </argument>
+        <argument id="contentFormat">
+          <value class="value" valueClass="string">Text</value>
+        </argument>
+        <argument id="contentEncoding">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Contents</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="storeAs">
+          <value class="value" valueClass="string">Text</value>
+        </argument>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource variableName="SourceData" variableScope="Test">
+          <cacheToken>C:/Users/aniket.pathania/Downloads/ABC (1).xlsx;1723099877433</cacheToken>
+          <cachedParameters>
+            <apiParam name="RowNumber"/>
+            <apiParam name="PC"/>
+            <apiParam name="PSC"/>
+            <apiParam name="ListPN"/>
+          </cachedParameters>
+          <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
+            <workbookPath class="value" valueClass="string">C:\\Users\\aniket.pathania\\Downloads\\ABC (1).xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">Sheet1</worksheetName>
+            <valuesRange class="value" valueClass="string">A1:C21</valuesRange>
+          </sourceValue>
+        </parameterValueSource>
+      </parameterValueSources>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="2a8bf8ef-c0fe-4fed-af81-0bf0d373338a" name="SetValues" testItemId="4" title="Set Values: Var.PC">
+      <tags/>
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Var.PC</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Aniket</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" guid="c6d50f75-3cf7-434e-a42e-ef2f0ba3c20a" name="Write" testItemId="3" title="Write: {Var}=&gt;C:\\\\Users\\\\aniket.pathania\\\\Downloads\\\\ABC.xlsx">
+      <tags/>
+      <arguments>
+        <argument id="data">
+          <value class="variable">
+            <path element="Var"/>
+          </value>
+        </argument>
+        <argument id="dataUrl">
+          <value class="excelTarget" sheetWriteMode="Update">
+            <workbookPath class="value" valueClass="string">C:\\Users\\aniket.pathania\\Downloads\\ABC.xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">Sheet1</worksheetName>
+          </value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">C:\\\\Users\\\\aniket.pathania\\\\Downloads\\\\ABC.xlsx</value>
+        </argument>
+        <argument id="updateValueRange"/>
+        <argument id="updateColumnNames">
+          <value class="value" valueClass="string">FirstRowOfRange</value>
+        </argument>
+        <argument id="updateMatchType">
+          <value class="value" valueClass="string">RowOrColNumber</value>
+        </argument>
+        <argument id="updateMatchLocator"/>
+      </arguments>
+      <generatedParameters>
+        <apiParam group="result" name="updateValueRange" title="Values Range">
+          <summary>The range of cells that needs to updated. If nothing is specified entire sheet is targeted</summary>
+          <type>
+            <textType>
+              <constraints>
+                <valueConstraint name="disableTemplateEditor">true</valueConstraint>
+              </constraints>
+            </textType>
+          </type>
+        </apiParam>
+        <apiParam group="result" name="updateColumnNames" title="Column Names">
+          <summary>Identifies where the column names are in the spreadsheet:</summary>
+          <defaultValue>FirstRowOfRange</defaultValue>
+          <type>
+            <choiceType>
+              <constraints>
+                <valueConstraint name="boundedValues">FirstRowOfRange:Across the first row|FirstColumnOfRange:Down the first column</valueConstraint>
+              </constraints>
+            </choiceType>
+          </type>
+        </apiParam>
+        <apiParam group="result" internal="true" name="updateMatchType" title="">
+          <summary/>
+          <defaultValue>RowOrColNumber</defaultValue>
+          <type>
+            <choiceType>
+              <constraints>
+                <valueConstraint name="boundedValues">RowOrColNumber:Match by Position|Where:Match on Condition|MatchColumns:Match by Columns</valueConstraint>
+              </constraints>
+            </choiceType>
+          </type>
+        </apiParam>
+        <apiParam group="result" manuallyResolved="true" name="updateMatchLocator" title="Match Locator">
+          <summary>Identifies which rows in the Range will be updated. \n It can either be a row number (where the first row = 1) or a filtering condition against one or more columns (e.g. {firstName = "Joe" and surname = "Bloggs"}.</summary>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="4d18c620-dbab-4434-9770-1259008ad96f" id="0">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="1180ad34-d2a7-4830-8393-a127b2dca24b" name="ApexConnect" testItemId="11" title="Salesforce Connect: SalesForce (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">af2db824-31a2-4483-be7a-5fa76cf39100</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="710bb647-55fa-4f2d-8456-3bb85b874750" name="SetValues" testItemId="1" title="Set Values: Number2">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Number1</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">200</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Number2</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">0</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+      <parameterValueSources/>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="16a2f6c4-580b-4d33-9507-07097a3cf111" name="SetValues" testItemId="3" title="Set Values: Division">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Division</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="div">
+                  <lhs class="variable">
+                    <path element="Number1"/>
+                  </lhs>
+                  <rhs class="variable">
+                    <path element="Number2"/>
+                  </rhs>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+      <expectedExceptions>
+        <expectedException comparisonType="Contains" title="ArithmeticException">
+          <assertionValue class="value" valueClass="string">Division by zero</assertionValue>
+        </expectedException>
+      </expectedExceptions>
+    </apiCall>
+  </steps>
+</testCase>

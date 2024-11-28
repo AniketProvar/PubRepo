@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="fcd6a3d5-e99a-471d-9ca4-71d0471cd9df" id="16">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.restservice.WebConnect" guid="5538da7b-bc1c-45b7-a486-b5abc70a332d" name="WebConnect" testItemId="1" title="Web Connect: rest">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">rest</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">b86d3768-1c1c-4996-9b2c-8333f5c388c6</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">rest</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.restservice.RestRequest" guid="3e2bc67c-da7d-4ae9-afa8-1c6dfdb7604f" name="RestRequest" testItemId="2" title="Web Request (REST): ⇒RestResponse">
+      <tagReferences>
+        <tagRef tagName="Aniket" tagTypeName="owner"/>
+      </tagReferences>
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">rest</value>
+        </argument>
+        <argument id="targetValue">
+          <value class="restTarget" uri="rest:untyped?method=GET&amp;bodyStyle=JSON"/>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">RestResponse</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="statusResultName">
+          <value class="value" valueClass="string">RestResponseStatus</value>
+        </argument>
+        <argument id="restResourceUrl">
+          <value class="value" valueClass="string">/user/aniket</value>
+        </argument>
+        <argument id="restRequestHeader"/>
+      </arguments>
+      <generatedParameters>
+        <apiParam group="request" internal="true" name="restResourceUrl" title="Resource URL">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="header" internal="true" name="restRequestHeader" passwordVariableAllowed="true" title="Request Header">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>

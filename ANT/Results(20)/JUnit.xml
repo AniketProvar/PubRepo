@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="new_test/tests" tests="2" failures="2" skipped="0" hostname="ibm-aniketpathania" time="161.222" timestamp="Tue Sep 24 12:12:43 IST 2024">
+	<properties>
+		<property name="excludeCallableTestCases" value="true"/>
+		<property name="testEnvironment" value="PreProd"/>
+		<property name="pluginOutputLevel" value="WARNING"/>
+		<property name="projectPath" value=".."/>
+		<property name="salesforceMetadataCache" value="Reuse"/>
+		<property name="resultsPathDisposition" value="Increment"/>
+		<property name="testOutputLevel" value="INFO"/>
+		<property name="webBrowserType" value="Chrome"/>
+		<property name="resultsPath" value="../ANT/Results"/>
+		<property name="webBrowserConfiguration" value="Full Screen"/>
+		<property name="projectCachePath" value="C:\Users\aniket.pathania\git\repository3\new_test\ANT\..\..\.provarCaches"/>
+	</properties>
+	<testcase classname="tests/Salesforce\AccountCreation_Assertion.testcase" name="AccountCreation_Assertion.testcase" time="124.942">
+		<failure message="Execution failed"><![CDATA[The required connection name isn't present.  This should come from the containing With Screen API.]]></failure>
+	</testcase>
+	<testcase classname="tests/Salesforce\Createcontacts222.testcase" name="Createcontacts222.testcase" time="29.573">
+		<failure message="Execution failed"><![CDATA[Assertion Failed.false EqualTo true]]></failure>
+	</testcase>
+</testsuite>

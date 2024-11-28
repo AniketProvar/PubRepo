@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="fbf918a6-af21-4071-a48e-6ceeb3ec08fc" id="17">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="0fe25e5b-5cea-41d3-bdbf-402ef66780ea" name="StepGroup" testItemId="10" title="readExcel">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">readExcel</value>
+        </argument>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource variableName="SourceData" variableScope="Test">
+          <cacheToken>C:/Users/aniket.pathania/Provar/Workspace11/new_test/templates/Sample.xlsx;1724926159082</cacheToken>
+          <cachedParameters>
+            <apiParam name="Salutation"/>
+            <apiParam name="FirstName"/>
+            <apiParam name="LastName"/>
+            <apiParam name="Company"/>
+            <apiParam name="LeadOwener"/>
+          </cachedParameters>
+          <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
+            <workbookPath class="value" valueClass="string">templates/Sample.xlsx</workbookPath>
+            <worksheetName class="value"/>
+            <valuesRange class="value"/>
+          </sourceValue>
+        </parameterValueSource>
+      </parameterValueSources>
+      <clauses>
+        <clause name="hidden" testItemId="11"/>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="c7aa4982-dc88-4f74-984c-862b8b124685" name="SetValues" testItemId="12" title="Set Values: {Var.LastName}">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="variable">
+                  <path element="Var"/>
+                  <path element="LastName"/>
+                </value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Pathania</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" guid="19f63a96-f179-4d39-a5fb-8f70da02b232" name="Write" testItemId="2" title="Write: {SourceData}=&gt;templates/empty.xlsx">
+      <arguments>
+        <argument id="data">
+          <value class="variable">
+            <path element="SourceData"/>
+          </value>
+        </argument>
+        <argument id="dataUrl">
+          <value class="excelTarget" sheetWriteMode="UPDATE">
+            <workbookPath class="value" valueClass="string">templates/empty.xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">Sheet0</worksheetName>
+          </value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">templates/empty.xlsx</value>
+        </argument>
+        <argument id="updateValueRange"/>
+        <argument id="updateColumnNames">
+          <value class="value" valueClass="string">FIRST_COLUMN_OF_RANGE</value>
+        </argument>
+        <argument id="updateMatchType">
+          <value class="value" valueClass="string">Where</value>
+        </argument>
+        <argument id="updateMatchLocator">
+          <value class="eq">
+            <lhs class="variable">
+              <path element="Salutation"/>
+            </lhs>
+            <rhs class="value" valueClass="string">Mr.</rhs>
+          </value>
+        </argument>
+      </arguments>
+      <generatedParameters>
+        <apiParam group="result" name="updateValueRange" title="Values Range">
+          <summary>The range of cells that needs to updated. If nothing is specified entire sheet is targeted</summary>
+          <type>
+            <textType>
+              <constraints>
+                <valueConstraint name="disableTemplateEditor">true</valueConstraint>
+              </constraints>
+            </textType>
+          </type>
+        </apiParam>
+        <apiParam group="result" name="updateColumnNames" title="Column Names">
+          <summary>Identifies where the column names are in the spreadsheet:</summary>
+          <defaultValue>FIRST_ROW_OF_RANGE</defaultValue>
+          <type>
+            <choiceType>
+              <constraints>
+                <valueConstraint name="boundedValues">FIRST_ROW_OF_RANGE:Across the first row|FIRST_COLUMN_OF_RANGE:Down the first column</valueConstraint>
+              </constraints>
+            </choiceType>
+          </type>
+        </apiParam>
+        <apiParam group="result" internal="true" name="updateMatchType" title="">
+          <summary/>
+          <defaultValue>ROWORCOLNUMBER</defaultValue>
+          <type>
+            <choiceType>
+              <constraints>
+                <valueConstraint name="boundedValues">ROWORCOLNUMBER:Match by Position|WHERE:Match on Condition|MATCHCOLUMNS:Match by Columns</valueConstraint>
+              </constraints>
+            </choiceType>
+          </type>
+        </apiParam>
+        <apiParam group="result" manuallyResolved="true" name="updateMatchLocator" title="Match Locator">
+          <summary>Identifies which rows in the Range will be updated. \n It can either be a row number (where the first row = 1) or a filtering condition against one or more columns (e.g. {firstName = "Joe" and surname = "Bloggs"}.</summary>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>

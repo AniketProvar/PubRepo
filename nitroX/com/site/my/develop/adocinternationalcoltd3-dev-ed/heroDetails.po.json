@@ -1,0 +1,40 @@
+{
+  "componentId" : "f7b4b75f-b1f5-4e6a-9516-04d6d1d4520b",
+  "name" : "/com/site/my/develop/adocinternationalcoltd3-dev-ed/heroDetails",
+  "tagName" : "c-hero-details",
+  "type" : "Block",
+  "pageStructureElement" : true,
+  "fieldDetailsElement" : false,
+  "elements" : [ {
+    "componentId" : "6b9c8728-d09a-4f27-8dbd-6407f85915ca",
+    "type" : "component::ac80f372-9d93-465e-ba20-267adb52ae54",
+    "label" : "Explore",
+    "properties" : [ ],
+    "parameters" : [ {
+      "name" : "innerText",
+      "value" : "Explore More",
+      "comparisonType" : "contains",
+      "default" : true
+    } ],
+    "elements" : [ ]
+  }, {
+    "componentId" : "48f485f5-405b-44a0-911f-2aa07a0cea6c",
+    "type" : "component::ac80f372-9d93-465e-ba20-267adb52ae54",
+    "label" : "SeeElectricBike",
+    "properties" : [ ],
+    "parameters" : [ {
+      "name" : "innerText",
+      "value" : "See Electra Bikes",
+      "comparisonType" : "contains",
+      "default" : true
+    } ],
+    "elements" : [ ]
+  }, {
+    "componentId" : "f2027dd5-9f94-481b-8d0b-55f63d5836e5",
+    "type" : "component::356e57c0-5f19-4f3f-95dd-614b698bd40e",
+    "label" : "OnDisplay",
+    "properties" : [ ],
+    "parameters" : [ ],
+    "elements" : [ ]
+  } ]
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="ce9acba8-d9c9-4775-b5dc-d02d9c9675fd" id="0">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbConnect" guid="333d6c62-c310-4eee-890b-cc2ca70b9d13" name="DbConnect" testItemId="2" title="DB Connect: DbConnection">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">DB</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">03f05d58-234a-415b-bd5f-8eb10d0f0eec</value>
+        </argument>
+        <argument id="autoCommit">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="ifAlreadyOpen">
+          <value class="value" valueClass="string">Reuse</value>
+        </argument>
+        <argument id="commitBehaviour">
+          <value class="value" valueClass="string">CommitIfSuccessful</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">DbConnection</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Global</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.db.DbRead" guid="73eeeaf0-dd1e-4b69-a066-e7a56082b227" name="DbRead" parameterGeneratorUri="command:com.provar.eclipse.ui.handlers.connection.DbReadTestStepCommand" testItemId="6" title="DB Read: DbConnection.city=&gt;DBRead">
+      <arguments>
+        <argument id="dbConnectionName">
+          <value class="value" valueClass="string">DbConnection</value>
+        </argument>
+        <argument id="tableName">
+          <value class="value" valueClass="string">city</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">DBRead</value>
+        </argument>
+        <argument id="where__ID">
+          <value class="value" valueClass="decimal">1</value>
+        </argument>
+        <argument id="where__Name">
+          <value class="value" valueClass="string">Kabul</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.eclipse.ui.handlers.connection.DbReadTestStepCommand.ConnectionName">DB</propertyValue>
+        <propertyValue name="com.provar.eclipse.ui.handlers.connection.DbReadTestStepCommand.TableName">city</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="wherecolumns" name="where__ID" title="ID">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="wherecolumns" name="where__Name" title="Name">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="7105c7bf-e125-42f4-b6d0-50fc68bb5c55" name="SetValues" testItemId="7" title="Set Values: d">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">d</value>
+              </namedValue>
+              <namedValue name="value"/>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

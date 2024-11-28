@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="b36c959e-cf85-4bf5-98fb-a5028f54c5fa" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="6246bea4-d723-4167-9b02-cba109ffa566" name="ApexConnect" testItemId="2" title="Salesforce Connect: SalesForce (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">af2db824-31a2-4483-be7a-5fa76cf39100</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument argId="c8e75dc1-3be9-491a-88d8-fe93402e9ca2" id="reuseConnectionName">
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="d3eb6883-7140-4d0a-8bd4-ffbc1f25291b" name="SetValues" testItemId="1" title="Set Values: a">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">a</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">10</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" guid="a41311c8-f0ba-467e-92d3-d72ea21f0a5b" name="ApexSoqlQuery" testItemId="3" title="SOQL Query: select Id\n    ,Name from Account=&gt;AccountRows">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="soqlQuery">
+          <value class="value" valueClass="string">select Id\n    ,Name from Account</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="resultListName">
+          <value class="value" valueClass="string">AccountRows</value>
+        </argument>
+        <argument id="soqlColumnAliases">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="6d64b4bf-bfdd-4a7f-94b8-f40bb36fea72" name="SetValues" testItemId="4" title="Set Values: ">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath"/>
+              <namedValue name="value"/>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+  <params>
+    <param linkedToUrl="provar:hasvalue:c8e75dc1-3be9-491a-88d8-fe93402e9ca2" name="reuseConnectionName" passwordVariableAllowed="true" title="Override Connection">
+      <summary>The name of an already opened connect to re-use.</summary>
+      <type>
+        <connectionType>
+          <constraints>
+            <valueConstraint name="variableName">true</valueConstraint>
+            <valueConstraint name="requiredCapabilities">sfSoapConnect</valueConstraint>
+          </constraints>
+        </connectionType>
+      </type>
+    </param>
+  </params>
+  <outputParams>
+    <param name="a" passwordVariableAllowed="true" title="a">
+      <summary>The name of the value to be set.  May contain sub-values, e.g. 'Value1.SubValue1'.</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="variable">
+        <path element="a"/>
+      </sourceValue>
+    </param>
+  </outputParams>
+  <args>
+    <argument id="reuseConnectionName"/>
+  </args>
+  <outputArgs>
+    <outputArgument id="a">
+      <name class="value" valueClass="string">a</name>
+    </outputArgument>
+  </outputArgs>
+</testCase>

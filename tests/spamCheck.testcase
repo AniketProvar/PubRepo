@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="c3cde3f7-a767-4063-af9b-779bf1bd2f30" id="0">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.messaging.Subscribe" guid="fc23408a-ab92-44a6-a30f-439db6377877" name="Subscribe" testItemId="1" title="Subscribe: Gmail">
+      <tags/>
+      <arguments>
+        <argument id="sourceConnectionName">
+          <value class="value" valueClass="string">Gmail</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">0347bca5-8f2b-4ec8-b3dc-e100495d7ee2</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">mail</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="folder">
+          <value class="variable">
+            <path element="Trash"/>
+          </value>
+        </argument>
+        <argument id="from"/>
+        <argument id="subject"/>
+        <argument id="parseAttachment"/>
+      </arguments>
+      <generatedParameters>
+        <param group="source" linkedToUrl="connectionParam:sourceConnectionName" name="folder" title="Folder">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="source" linkedToUrl="connectionParam:sourceConnectionName" name="from" title="From">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="source" linkedToUrl="connectionParam:sourceConnectionName" name="subject" title="Subject">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="source" linkedToUrl="connectionParam:sourceConnectionName" name="parseAttachment" title="Read Email Attachments">
+          <type>
+            <booleanType/>
+          </type>
+        </param>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.WaitFor" guid="d27d595f-963c-4345-900b-51c1535a76e8" name="WaitFor" testItemId="2" title="Wait For: {mail.messageCount &gt; 0}=&gt;{15}">
+      <tags/>
+      <arguments>
+        <argument id="condition">
+          <value class="gt">
+            <lhs class="variable">
+              <path element="mail"/>
+              <path element="messageCount"/>
+            </lhs>
+            <rhs class="value" valueClass="decimal">0</rhs>
+          </value>
+        </argument>
+        <argument id="testAtStart"/>
+        <argument id="maxIterations">
+          <value class="value" valueClass="decimal">3</value>
+        </argument>
+        <argument id="sleepSecs">
+          <value class="value" valueClass="decimal">15</value>
+        </argument>
+        <argument id="continueOnFailure"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="3"/>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

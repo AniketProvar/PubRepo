@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<style>
+
+			body {
+				font-family: sans-serif;
+			}
+
+			.TestCaseImplTitle {
+				color: blue;
+				font: 0.85em arial;
+				font-weight: bold;
+			}
+
+			.TestCaseImpl .TestItemTitle {
+				color: blue;
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+				margin-bottom: 0.5em;
+			}
+
+			.TestCaseImpl .TestItemOutcome {
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+			}
+
+			.ApiCallImpl .TestItemTitle{
+				color: blue;
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+				margin-bottom: 0.25em;
+			}
+
+			.ApiCallImpl .TestItemOutcome {
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+			}
+
+			.TestItemOutcome {
+				padding-left: 20px;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				clear: both;
+			}
+			
+			.TestItemOutcome.Successful {
+				color: green;
+				background: url('../../successful_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestItemOutcome.Failed {
+				color: red;
+				background: url('../../failed_16x16.gif') no-repeat 0 0.15em;
+				font-weight: bold;
+			}
+
+			.TestItemOutcome.Skipped {
+				color: orange;
+				background: url('../../skipped_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestOutput {
+				font: 0.9em arial;
+				color: black;
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
+
+			.TestOutput.err {
+				font-weight: bold;
+				color: red;
+			}
+
+			.TestOutput.war {
+				font-weight: bold;
+				color: orange;
+			}
+
+			.ApiCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.TestCaseCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body><div id='detail-body'>
+	<div style='float: right;'><img src='../..//provar_logo_400x100.png' height='50'/></div>
+<h2><img src='../..//testcase_16x16.png' style='height: 24; padding-top: 4px;'/> UiConTC.testcase</h2>
+<div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:02 (00:00.000)</span></div>Start of Test Case UiConTC.testcase</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:02 (00:00.009)</span></div>Start of Test Step UI Connect: UiConnection</div><div class='TestOutput inf'>Opening Selenium Connection.  Connection Name: UiConnection, Base URL: http://facebook.com, Private Browsing Mode: false</div><div class='TestOutput inf'>Opening Chrome webdriver instance to http://facebook.com</div><div class='TestOutput off'>Successfully opened Chrome webdriver to http://facebook.com</div><div class='TestOutput inf'>Selenium Connection opened successfully.</div><div class='TestOutput inf'>UI Connect step is success</div><div class='TestOutput off'>UI Connect step is success</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:03 (00:00.765)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:03 (00:00.765)</span></div>Start of Test Step On MyPageObject page</div><div class='TestOutput inf'>Start of With Screen.  Connection Name: UiConnection, target: ui:pageobject:target?pageId=pageobjects.MyPageObject</div><div class='TestOutput inf'>Navigating to URL: http://facebook.com</div><div class='TestOutput inf'>Opening Page context.  Name: screen, data: pageobjects.MyPageObject@2aab1db3, frame: null</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:05 (00:03.091)</span></div>Start of Test Step Set the Email Address Or Phone Number to aniket.pathnai@gmail.com</div><div class='TestOutput inf'>Start of Interact.  Connection: UiConnection, Locator: ui:pageobject:field?pageId=pageobjects.MyPageObject&field=emailAddressOrPhoneNumber, before wait: default, after wait: default, auto retry: ui:wait:autoRetry:timeout=10</div><div class='TestOutput inf'>Locator: ui:pageobject:field?pageId=pageobjects.MyPageObject&field=emailAddressOrPhoneNumber</div><div class='TestOutput inf'>Interaction: ui:interaction?name=set</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://www.facebook.com/</div><div class='TestOutput inf'>Doing before wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>Got webElement.  tagName: INPUT, id: email, type: text, selector: null</div><div class='TestOutput inf'>Typing value.  tagName: INPUT, type: text, value: aniket.pathnai@gmail.com, blur: false, selector: null</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:05 (00:03.674)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:05 (00:03.674)</span></div>Start of Test Step Set the Password to anippp@123</div><div class='TestOutput inf'>Start of Interact.  Connection: UiConnection, Locator: ui:pageobject:field?pageId=pageobjects.MyPageObject&field=password, before wait: default, after wait: default, auto retry: ui:wait:autoRetry:timeout=10</div><div class='TestOutput inf'>Locator: ui:pageobject:field?pageId=pageobjects.MyPageObject&field=password</div><div class='TestOutput inf'>Interaction: ui:interaction?name=set</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://www.facebook.com/</div><div class='TestOutput inf'>Doing before wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>Got webElement.  tagName: INPUT, id: pass, type: password, selector: null</div><div class='TestOutput inf'>Typing value.  tagName: INPUT, type: password, value: anippp@123, blur: false, selector: null</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:06 (00:04.074)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step Click the 1 SKIPPED</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step Click the 11 SKIPPED</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:06 (00:04.074)</span></div>Start of Test Step Click the 12</div><div class='TestOutput inf'>Start of Interact.  Connection: UiConnection, Locator: ui:pageobject:field?pageId=pageobjects.MyPageObject&field=_12, before wait: default, after wait: default, auto retry: ui:wait:autoRetry:timeout=10</div><div class='TestOutput inf'>Locator: ui:pageobject:field?pageId=pageobjects.MyPageObject&field=_12</div><div class='TestOutput inf'>Interaction: ui:interaction?name=action</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://www.facebook.com/</div><div class='TestOutput inf'>Doing before wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>Clicking WebElement.  WebElement [tag: button, text: 1, text: Log in]</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:06 (00:04.382)</span></div>Test Step successful.</div></div><div class='TestOutput inf'>All Sub-Test Steps were successful.</div><div class='TestOutput inf'>Closing Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Main window reselected.  Window: main</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:06 (00:04.422)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:06 (00:04.422)</span></div>Start of Test Step Handle UI Alerts</div><div class='TestOutput sev'>The required connection name isn't present.  This should come from the containing With Screen API.</div><div class='TestOutput sev'>The required connection name isn't present.  This should come from the containing With Screen API.</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:06 (00:04.432)</span></div>Test Step failed.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step Do Action SKIPPED</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step Submit for Approval:  =&gt; workItemIds SKIPPED</div></div><div class='TestOutput inf'>Rolling back updates for SQLServer connection for CommitIfSuccessful setting because Test Case failed.  Connection: DbConnection</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>15:06:06 (00:04.432)</span></div>Test Case failed.</div></div><div class='TestOutput inf'>Handling managed resource.  Name: UiConnection</div><div class='TestOutput off'>Selenium Connection handled successfully.  Name: UiConnection</div>
+	</div></body>
+</html>

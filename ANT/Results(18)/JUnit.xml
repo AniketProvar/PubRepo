@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="new_test/tests" tests="1" failures="1" skipped="0" hostname="ibm-aniketpathania" time="67.082" timestamp="Mon Sep 23 12:31:30 IST 2024">
+	<properties>
+		<property name="excludeCallableTestCases" value="true"/>
+		<property name="testEnvironment" value="PreProd"/>
+		<property name="pluginOutputLevel" value="WARNING"/>
+		<property name="projectPath" value=".."/>
+		<property name="salesforceMetadataCache" value="Reuse"/>
+		<property name="resultsPathDisposition" value="Increment"/>
+		<property name="testOutputLevel" value="INFO"/>
+		<property name="webBrowserType" value="Chrome"/>
+		<property name="resultsPath" value="../ANT/Results"/>
+		<property name="webBrowserConfiguration" value="Full Screen"/>
+		<property name="projectCachePath" value="C:\Users\aniket.pathania\Provar\Workspace11\new_test\ANT\..\..\.provarCaches"/>
+	</properties>
+	<testcase classname="tests/Salesforce\AccountCreation_Assertion.testcase" name="AccountCreation_Assertion.testcase" time="66.881">
+		<failure message="Execution failed"><![CDATA[The control was not found.  Locator: By.xpath: ( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or contains(@class, 'inlineEditCompoundDiv')]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Rating' or normalize-space(.//text()) = 'Rating' )]/following-sibling::td[1] | //div[contains(@class,'pbBody') and not(//div[@id='InlineEditDialog' and contains(@style, 'visible')])]//div[contains(@class,'pbSubheader') and (h3/text()[not(parent::span)] = 'Account Information' or translate(normalize-space(h3/text()[not(parent::span)]), ' ', '') = translate(normalize-space('Account Information'), ' ', ''))]/following-sibling::div[contains(@class,'pbSubsection')][1]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Rating' or normalize-space(.//text()) = 'Rating' )]/following-sibling::td[1] )]]></failure>
+	</testcase>
+</testsuite>

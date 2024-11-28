@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testProject guid="2fd27684-f58f-42d3-add7-28776f6cb540" secretsEncryption="JASYPT" selectedBrowserProviderDeviceName="Full Screen" selectedBrowserProviderName="Desktop" selectedEnvironment="PreProd" selectedEnvironmentGuid="bcccedd0-4271-4f51-91c3-4b8cddd695a9" selectedWebBrowserType="Chrome_Headless">
+  <title>/new_test/.testproject</title>
+  <configPath>config</configPath>
+  <testsPath>tests</testsPath>
+  <testPlansPath>plans</testPlansPath>
+  <templatesPath>templates</templatesPath>
+  <sourcePath>src</sourcePath>
+  <secureStoragePath>.secrets</secureStoragePath>
+  <browserDebugPort>0</browserDebugPort>
+  <environments>
+    <environment guid="bcccedd0-4271-4f51-91c3-4b8cddd695a9" name="PreProd">
+      <summary/>
+      <associations>
+        <association assocationType="t9TM.ENVIRONMENT" connectionId="fc916926-8ad9-4e9e-955c-c571f2019341" entityKey="a0IdM000000AZMIUA4"/>
+      </associations>
+    </environment>
+    <environment guid="8de81950-5696-4ffc-8ea9-21e3f58a6e52" name="teste">
+      <summary/>
+      <associations>
+        <association assocationType="TM.ENVIRONMENT" connectionId="fc916926-8ad9-4e9e-955c-c571f2019341" entityKey="a0IdM000000AZMHUA4"/>
+      </associations>
+    </environment>
+  </environments>
+  <variables>
+    <testVariable name="v1">
+      <valueType class="textType">
+        <constraints>
+          <valueConstraint name="minLength">0</valueConstraint>
+          <valueConstraint name="maxLength">9999</valueConstraint>
+        </constraints>
+      </valueType>
+      <summary/>
+      <values>
+        <testVariableValue>
+          <value class="value" valueClass="string">10</value>
+        </testVariableValue>
+        <testVariableValue envId="8de81950-5696-4ffc-8ea9-21e3f58a6e52" envName="teste">
+          <valueType class="textType">
+            <constraints>
+              <valueConstraint name="minLength">0</valueConstraint>
+              <valueConstraint name="maxLength">9999</valueConstraint>
+            </constraints>
+          </valueType>
+          <value class="value" valueClass="string">12</value>
+        </testVariableValue>
+      </values>
+    </testVariable>
+    <testVariable name="DefaultName">
+      <valueType class="textType">
+        <constraints>
+          <valueConstraint name="minLength">0</valueConstraint>
+          <valueConstraint name="maxLength">9999</valueConstraint>
+        </constraints>
+      </valueType>
+      <summary/>
+      <values>
+        <testVariableValue>
+          <value class="value" valueClass="string">TestSet</value>
+        </testVariableValue>
+        <testVariableValue envId="bcccedd0-4271-4f51-91c3-4b8cddd695a9" envName="PreProd">
+          <valueType class="textType">
+            <constraints>
+              <valueConstraint name="minLength">0</valueConstraint>
+              <valueConstraint name="maxLength">9999</valueConstraint>
+            </constraints>
+          </valueType>
+          <value class="value" valueClass="string">TestSettings</value>
+        </testVariableValue>
+      </values>
+    </testVariable>
+    <testVariable name="v2">
+      <valueType class="textType">
+        <constraints>
+          <valueConstraint name="minLength">0</valueConstraint>
+          <valueConstraint name="maxLength">9999</valueConstraint>
+        </constraints>
+      </valueType>
+      <summary/>
+      <values>
+        <testVariableValue>
+          <value class="value" valueClass="string">100</value>
+        </testVariableValue>
+        <testVariableValue envId="8de81950-5696-4ffc-8ea9-21e3f58a6e52" envName="teste">
+          <valueType class="textType">
+            <constraints>
+              <valueConstraint name="minLength">0</valueConstraint>
+              <valueConstraint name="maxLength">9999</valueConstraint>
+            </constraints>
+          </valueType>
+          <value class="value" valueClass="string">200</value>
+        </testVariableValue>
+      </values>
+    </testVariable>
+    <testVariable name="A">
+      <valueType class="textType">
+        <constraints>
+          <valueConstraint name="password">true</valueConstraint>
+        </constraints>
+      </valueType>
+      <summary/>
+      <values>
+        <testVariableValue secureStorageNodeId="2dc50eff-8755-44ec-9c2e-a90311b4a0f3"/>
+      </values>
+    </testVariable>
+  </variables>
+  <connectionClasses>
+    <connectionClass name="sf">
+      <connections>
+        <connection id="af2db824-31a2-4483-be7a-5fa76cf39100" name="SalesForce">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="186c09c2-b601-4633-b522-ce2af8268942" url="sf:user=aniket.pathania@sandbox.com;password={password};securityToken={securityToken};environment=PROD_DEV;lightningMode=true"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="google">
+      <connections>
+        <connection id="0347bca5-8f2b-4ec8-b3dc-e100495d7ee2" name="Gmail">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="bb93a45f-c81b-461a-95f2-10aecb06ac3f" url="google:user=aniket.pathania@provartesting.com;accessToken={accessToken};refreshToken={refreshToken};expiry=1727963194671"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="webservice">
+      <connections>
+        <connection id="b86d3768-1c1c-4996-9b2c-8333f5c388c6" name="rest">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="restservice:url=https://petstore.swagger.io/v2;authenticationType=NO_AUTHENTICATION">
+              <customHeaders/>
+            </connectionUrl>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="ui">
+      <connections>
+        <connection id="468c8264-5e17-4632-be98-a78fe60dc969" name="UiConnection">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=http://facebook.com"/>
+          </connectionUrls>
+        </connection>
+        <connection id="1850e02d-2433-4181-bf27-b4bb81e0dbe4" name="textCheck">
+          <summary>for checking text file downloads</summary>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=https://filesampleshub.com/format/document/txt"/>
+          </connectionUrls>
+        </connection>
+        <connection id="c6ac3ed4-6cb3-4e0f-9e66-a1f22c63b385" name="ADOC_ExpCloud">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=https://adocinternationalcoltd3-dev-ed.develop.my.site.com/ebikes/s/"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="database">
+      <connections>
+        <connection id="03f05d58-234a-415b-bd5f-8eb10d0f0eec" name="DB">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="2878f45c-2c4e-4206-8505-495f35f3a5bb" url="jdbc:mysql://localhost:3306/world?schemaName=world&amp;user=root&amp;password={password}"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="testmanager">
+      <connections>
+        <connection id="fc916926-8ad9-4e9e-955c-c571f2019341" name="ProMan">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="bbd4b94a-4f1c-4ffd-b279-62eff70f2aa4" url="tm:projectName=new_test;projectKey=PROMAN;clientId={clientId};clientSecret={clientSecret};callbackUrl={callbackUrl};environment=PROD_DEV;accessToken={accessToken};refreshToken={refreshToken};apiLoginUrl=https://provar-fd-dev-ed.develop.my.salesforce.com;identityServiceUrl=https://login.salesforce.com/id/00DdM000007GWT1UAO/005dM000004cfB7QAI;authenticationType=OAUTH_MANAGED;jwtCertType=JKS"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+  </connectionClasses>
+  <tagTypes>
+    <tagType name="owner" tagClass="owner" title="Business Owner">
+      <summary>The person or team that owns a Test Case on the business side</summary>
+      <tags>
+        <tag name="Aniket">
+          <summary/>
+        </tag>
+      </tags>
+    </tagType>
+    <tagType name="maintainer" tagClass="maintainer" title="Test Case Maintainer">
+      <summary>The person or team responsible for maintaining a Test Case</summary>
+      <tags>
+        <tag name="ATA">
+          <summary/>
+        </tag>
+      </tags>
+    </tagType>
+    <tagType name="sla" tagClass="sla" title="SLA Requirement">
+      <summary>Service Level Agreement requirement</summary>
+      <tags>
+        <slaTag expectedDurationMs="0" maximumDurationMs="0">
+          <summary/>
+        </slaTag>
+      </tags>
+      <tagTypeTargets>
+        <tagTypeTarget targetName="com.provar.core.model.test.api.ITestItem"/>
+      </tagTypeTargets>
+    </tagType>
+  </tagTypes>
+  <browserConfigurations>
+    <browserConfiguration adjustBrowserWidthForChromeIde="true" browserHeight="0" browserWidth="0" name="Full Screen">
+      <summary>Full screen with Test Builder adjustment</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="768" browserHeightType="Pixels" browserWidth="1024" browserWidthType="Pixels" name="1024x768">
+      <summary>Fixed 1024x768</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="800" browserHeightType="Pixels" browserWidth="1280" browserWidthType="Pixels" name="1280x800">
+      <summary>Fixed 1280x800</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="768" browserHeightType="Pixels" browserWidth="1366" browserWidthType="Pixels" name="1366x768">
+      <summary>Fixed 1366x768</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="1080" browserHeightType="Pixels" browserWidth="1920" browserWidthType="Pixels" name="1920x1080">
+      <summary>Fixed 1920x1080</summary>
+    </browserConfiguration>
+  </browserConfigurations>
+  <antPath>ANT</antPath>
+  <testCyclePath>TestCycle</testCyclePath>
+  <browserApplications>
+    <browserApplication connectionTypes="sf" name="Salesforce1">
+      <properties>
+        <browserPlatformProperty name="browserName" platform="IOS" type="DesiredCapability" value="Safari"/>
+        <browserPlatformProperty name="browserName" platform="ANDROID" type="DesiredCapability" value="Chrome"/>
+      </properties>
+    </browserApplication>
+    <browserApplication connectionTypes="sf" name="ServiceMax FSA">
+      <properties>
+        <browserPlatformProperty name="bundleId" platform="IOS" type="DesiredCapability" value="com.servicemaxinc.svmxfieldserviceapp"/>
+        <browserPlatformProperty name="app" platform="DESKTOP" type="DesiredCapability" value="C:\\Program Files\\ServiceMax\\ServiceMax Field Service\\Laptop Mobile.exe"/>
+      </properties>
+    </browserApplication>
+  </browserApplications>
+  <browserProviders>
+    <browserProvider name="Desktop" type="SeleniumLocal">
+      <devices>
+        <browserProviderDevice name="Full Screen">
+          <properties>
+            <browserPlatformProperty name="summary" value="Full screen with Test Builder adjustment"/>
+            <browserPlatformProperty name="browserHeightType" value="Full"/>
+            <browserPlatformProperty name="browserWidthType" value="Full"/>
+            <browserPlatformProperty name="adjustBrowserWidthForChromeIde" value="true"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1024x768">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1024x768"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="768"/>
+            <browserPlatformProperty name="browserWidth" value="1024"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1280x800">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1280x800"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="800"/>
+            <browserPlatformProperty name="browserWidth" value="1280"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1366x768">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1366x768"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="768"/>
+            <browserPlatformProperty name="browserWidth" value="1366"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1920x1080">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1920x1080"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="1080"/>
+            <browserPlatformProperty name="browserWidth" value="1920"/>
+          </properties>
+        </browserProviderDevice>
+      </devices>
+      <properties/>
+    </browserProvider>
+    <browserProvider name="BrowserStack" secureStorageNodeId="e7dd795f-e61c-41b2-a99c-d7f77b91052a" type="BrowserStackDesktop">
+      <devices>
+        <browserProviderDevice name="MAC10_14 chrome" platform="MAC10_14">
+          <properties>
+            <browserPlatformProperty name="browserName" type="DesiredCapability" value="chrome"/>
+            <browserPlatformProperty name="resolution" type="DesiredCapability" value="1024x768"/>
+          </properties>
+        </browserProviderDevice>
+      </devices>
+      <properties>
+        <browserPlatformProperty name="userName" value="aniketpathania_UYEy64"/>
+      </properties>
+    </browserProvider>
+  </browserProviders>
+  <associations>
+    <association assocationType="TM.TEST_PROJECT" connectionId="fc916926-8ad9-4e9e-955c-c571f2019341" entityKey="a0zdM0000006wJ3QAI"/>
+  </associations>
+</testProject>

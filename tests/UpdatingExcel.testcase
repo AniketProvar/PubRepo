@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="a836c882-17f9-471e-8ed4-2a0e170c018a" id="35">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="7d4e40db-326a-4025-8766-63a7a4efd1ae" name="StepGroup" testItemId="1" title="read excel">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">read excel</value>
+        </argument>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource variableName="SourceData" variableScope="Test">
+          <cacheToken>C:/Users/aniket.pathania/Provar/Workspace11/new_test/templates/TestData.xlsx;1725255663232</cacheToken>
+          <cachedParameters>
+            <apiParam name="SNo"/>
+            <apiParam name="AccountCountry"/>
+            <apiParam name="AccountName"/>
+          </cachedParameters>
+          <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
+            <workbookPath class="value" valueClass="string">templates/TestData.xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">task</worksheetName>
+            <valuesRange class="value"/>
+          </sourceValue>
+        </parameterValueSource>
+      </parameterValueSources>
+      <clauses>
+        <clause name="hidden" testItemId="2"/>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="f847a638-52f3-4c57-8cb5-f46e3259e424" name="SetValues" testItemId="4" title="Set Values: Var.Name">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Var.Name</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Pathania</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" guid="5e357821-c815-43c5-a4ba-de4d0b8761bc" name="Write" testItemId="3" title="Write: {Var}=&gt;templates/TestData.xlsx">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="data">
+          <value class="variable">
+            <path element="Var"/>
+          </value>
+        </argument>
+        <argument id="dataUrl">
+          <value class="excelTarget" sheetWriteMode="Update">
+            <workbookPath class="value" valueClass="string">templates/TestData.xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">task</worksheetName>
+          </value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">templates/TestData.xlsx</value>
+        </argument>
+        <argument id="updateValueRange"/>
+        <argument id="updateColumnNames">
+          <value class="value" valueClass="string">FirstRowOfRange</value>
+        </argument>
+        <argument id="updateMatchType">
+          <value class="value" valueClass="string">RowOrColNumber</value>
+        </argument>
+        <argument id="updateMatchLocator">
+          <value class="value" valueClass="string">3</value>
+        </argument>
+      </arguments>
+      <generatedParameters>
+        <apiParam group="result" name="updateValueRange" title="Values Range">
+          <summary>The range of cells that needs to updated. If nothing is specified entire sheet is targeted</summary>
+          <type>
+            <textType>
+              <constraints>
+                <valueConstraint name="disableTemplateEditor">true</valueConstraint>
+              </constraints>
+            </textType>
+          </type>
+        </apiParam>
+        <apiParam group="result" name="updateColumnNames" title="Column Names">
+          <summary>Identifies where the column names are in the spreadsheet:</summary>
+          <defaultValue>FirstRowOfRange</defaultValue>
+          <type>
+            <choiceType>
+              <constraints>
+                <valueConstraint name="boundedValues">FirstRowOfRange:Across the first row|FirstColumnOfRange:Down the first column</valueConstraint>
+              </constraints>
+            </choiceType>
+          </type>
+        </apiParam>
+        <apiParam group="result" internal="true" name="updateMatchType" title="">
+          <summary/>
+          <defaultValue>RowOrColNumber</defaultValue>
+          <type>
+            <choiceType>
+              <constraints>
+                <valueConstraint name="boundedValues">RowOrColNumber:Match by Position|Where:Match on Condition|MatchColumns:Match by Columns</valueConstraint>
+              </constraints>
+            </choiceType>
+          </type>
+        </apiParam>
+        <apiParam group="result" manuallyResolved="true" name="updateMatchLocator" title="Match Locator">
+          <summary>Identifies which rows in the Range will be updated. \n It can either be a row number (where the first row = 1) or a filtering condition against one or more columns (e.g. {firstName = "Joe" and surname = "Bloggs"}.</summary>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.list.ListCompare" guid="0d0c927f-3838-47a7-b094-a67d67402300" name="ListCompare" testItemId="5" title="Compare: =&gt;">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="list1"/>
+        <argument id="list2"/>
+        <argument id="matchColumns"/>
+        <argument id="compareColumns"/>
+        <argument id="ignoreColumns"/>
+        <argument id="differenceHandling">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="unmatched1Handling">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="unmatched2Handling">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="caseInsensitive">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.string.Match" guid="8e605ce5-b8ee-47c2-86fc-4bcd6e614b57" name="Match" testItemId="6" title="Match: =&gt;=&gt;">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="input"/>
+        <argument id="regex"/>
+        <argument id="caseInsensitive"/>
+        <argument id="resultName"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="b26a9b1f-28d0-451d-8d7e-32f74eadbe69" name="SetValues" testItemId="7" title="Set Values: date">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">date</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateAdd">
+                  <argument id="date">
+                    <value class="variable">
+                      <path element="TODAY"/>
+                    </value>
+                  </argument>
+                  <argument id="amount">
+                    <value class="value" valueClass="decimal">2</value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

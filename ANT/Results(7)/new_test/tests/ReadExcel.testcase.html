@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<style>
+
+			body {
+				font-family: sans-serif;
+			}
+
+			.TestCaseImplTitle {
+				color: blue;
+				font: 0.85em arial;
+				font-weight: bold;
+			}
+
+			.TestCaseImpl .TestItemTitle {
+				color: blue;
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+				margin-bottom: 0.5em;
+			}
+
+			.TestCaseImpl .TestItemOutcome {
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+			}
+
+			.ApiCallImpl .TestItemTitle{
+				color: blue;
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+				margin-bottom: 0.25em;
+			}
+
+			.ApiCallImpl .TestItemOutcome {
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+			}
+
+			.TestItemOutcome {
+				padding-left: 20px;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				clear: both;
+			}
+			
+			.TestItemOutcome.Successful {
+				color: green;
+				background: url('../../successful_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestItemOutcome.Failed {
+				color: red;
+				background: url('../../failed_16x16.gif') no-repeat 0 0.15em;
+				font-weight: bold;
+			}
+
+			.TestItemOutcome.Skipped {
+				color: orange;
+				background: url('../../skipped_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestOutput {
+				font: 0.9em arial;
+				color: black;
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
+
+			.TestOutput.err {
+				font-weight: bold;
+				color: red;
+			}
+
+			.TestOutput.war {
+				font-weight: bold;
+				color: orange;
+			}
+
+			.ApiCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.TestCaseCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body><div id='detail-body'>
+	<div style='float: right;'><img src='../..//provar_logo_400x100.png' height='50'/></div>
+<h2><img src='../..//testcase_16x16.png' style='height: 24; padding-top: 4px;'/> ReadExcel.testcase</h2>
+<div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:23 (00:00.000)</span></div>Start of Test Case ReadExcel.testcase</div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step Read: C:\Users\aniket.pathania\Downloads\ABC (1).xlsx=&gt;Contents SKIPPED</div></div><div class='TestOutput inf'>Loading data from Parameter Value Source ...</div><div class='TestOutput inf'>Loading Parameter Value Source row 1:</div><div class='TestOutput inf'>==Column=&gt; RowNumber = PrimitiveValueImpl [ value: 2, valueId=null, createdUpdateSeq=-1, updatedUpdateSeq=-1]</div><div class='TestOutput inf'>==Column=&gt; PC = PrimitiveValueImpl [ value: Aniket, valueId=null, createdUpdateSeq=-1, updatedUpdateSeq=-1]</div><div class='TestOutput off'>Loaded 1 rows from Parameter Value Source.</div><div class='TestOutput inf'>Loading data from Parameter Value Source ...</div><div class='TestOutput inf'>Loading Parameter Value Source row 1:</div><div class='TestOutput inf'>==Column=&gt; RowNumber = PrimitiveValueImpl [ value: 2, valueId=null, createdUpdateSeq=-1, updatedUpdateSeq=-1]</div><div class='TestOutput inf'>==Column=&gt; PC = PrimitiveValueImpl [ value: Aniket, valueId=null, createdUpdateSeq=-1, updatedUpdateSeq=-1]</div><div class='TestOutput off'>Loaded 1 rows from Parameter Value Source.</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:23 (00:00.032)</span></div>Start of Test Step readexcel</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:23 (00:00.059)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:23 (00:00.061)</span></div>Start of Test Step Set Values: ListPN_Value</div><div class='TestOutput inf'>Setting value ListPN_Value to &lt;null&gt;</div><div class='TestOutput fin'>Configuration: ValueScope:Test</div><div class='TestOutput off'>Successfully set ListPN_Value to &lt;null&gt;</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:23 (00:00.067)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:23 (00:00.068)</span></div>Start of Test Step Write: {SourceData}=&gt;C:\\Users\\aniket.pathania\\Downloads\\ABC (1).xlsx</div><div class='TestOutput inf'>Writing to URL C:\\Users\\aniket.pathania\\Downloads\\ABC (1).xlsx</div><div class='TestOutput inf'>Start of Excel Write.  WorkbookPath: C:\Users\aniket.pathania\Downloads\ABC (1).xlsx, excludeCols: [none]</div><div class='TestOutput inf'>Workbook location: C:\Users\aniket.pathania\Downloads\ABC (1).xlsx</div><div class='TestOutput inf'>Writing data to excel sheet: Sheet1</div><div class='TestOutput inf'>Got NamedValueList: NamedValueListValueImpl [ valueCount: 2, valueId=dd6, createdUpdateSeq=63, updatedUpdateSeq=69, values: [[id: dd7,entryName: RowNumber,entryId: dd8],[id: dd9,entryName: PC,entryId: dda]]]</div><div class='TestOutput inf'>Writing row 22</div><div class='TestOutput fin'>Found header.  colNum: 0</div><div class='TestOutput fin'>Writing cell PC: Aniket</div><div class='TestOutput off'>Completed writing data to excel sheet: Sheet1</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:25 (00:02.128)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:25 (00:02.128)</span></div>Start of Test Step Write: =&gt;</div><div class='TestOutput inf'>Writing to URL workbook.xlsx</div><div class='TestOutput inf'>Start of Excel Write.  WorkbookPath: workbook.xlsx, excludeCols: [none]</div><div class='TestOutput inf'>Workbook location: C:\Users\aniket.pathania\Provar\Workspace11\new_test\workbook.xlsx</div><div class='TestOutput war'>Not writing because no data was supplied</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:25 (00:02.132)</span></div>Test Step successful.</div></div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:13:25 (00:02.133)</span></div>Test Case successful.</div></div>
+	</div></body>
+</html>

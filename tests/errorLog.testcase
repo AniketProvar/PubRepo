@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="fc3fa2f1-8048-4c9e-91a5-c949c1a1c397" id="3" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Fail" guid="15aabffb-8175-4970-8f20-4c7d10362334" name="Fail" testItemId="2" title="Fail Test: justFailcallable">
+      <associations>
+        <association assocationType="TM.TEST_STEP" connectionId="fc916926-8ad9-4e9e-955c-c571f2019341" entityKey="a13dM0000082u9eQAA"/>
+      </associations>
+      <arguments>
+        <argument id="message">
+          <value class="value" valueClass="string">justFailcallable</value>
+        </argument>
+      </arguments>
+      <expectedExceptions>
+        <expectedException comparisonType="Contains" title="manage">
+          <assertionValue class="value" valueClass="string">justFailcallable</assertionValue>
+        </expectedException>
+      </expectedExceptions>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="d0454784-7f99-42cc-bb2c-a403ad982444" name="SetValues" testItemId="1" title="Set Values: d">
+      <associations>
+        <association assocationType="TM.TEST_STEP" connectionId="fc916926-8ad9-4e9e-955c-c571f2019341" entityKey="a13dM0000082u9fQAA"/>
+      </associations>
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">d</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="TestCaseErrors"/>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+  <outputParams>
+    <param name="d" passwordVariableAllowed="true" title="d">
+      <summary>The name of the value to be set.  May contain sub-values, e.g. 'Value1.SubValue1'.</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="variable">
+        <path element="d"/>
+      </sourceValue>
+    </param>
+  </outputParams>
+  <outputArgs>
+    <outputArgument id="d">
+      <name class="value" valueClass="string">d</name>
+    </outputArgument>
+  </outputArgs>
+  <associations>
+    <association assocationType="TM.TEST_CASE" connectionId="fc916926-8ad9-4e9e-955c-c571f2019341" entityKey="a0ldM000006sSbmQAE" lastUploadedDateTime="2024-10-08T05:04:12Z"/>
+  </associations>
+</testCase>

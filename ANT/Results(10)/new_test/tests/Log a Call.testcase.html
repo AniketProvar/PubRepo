@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<style>
+
+			body {
+				font-family: sans-serif;
+			}
+
+			.TestCaseImplTitle {
+				color: blue;
+				font: 0.85em arial;
+				font-weight: bold;
+			}
+
+			.TestCaseImpl .TestItemTitle {
+				color: blue;
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+				margin-bottom: 0.5em;
+			}
+
+			.TestCaseImpl .TestItemOutcome {
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+			}
+
+			.ApiCallImpl .TestItemTitle{
+				color: blue;
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+				margin-bottom: 0.25em;
+			}
+
+			.ApiCallImpl .TestItemOutcome {
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+			}
+
+			.TestItemOutcome {
+				padding-left: 20px;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				clear: both;
+			}
+			
+			.TestItemOutcome.Successful {
+				color: green;
+				background: url('../../successful_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestItemOutcome.Failed {
+				color: red;
+				background: url('../../failed_16x16.gif') no-repeat 0 0.15em;
+				font-weight: bold;
+			}
+
+			.TestItemOutcome.Skipped {
+				color: orange;
+				background: url('../../skipped_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestOutput {
+				font: 0.9em arial;
+				color: black;
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
+
+			.TestOutput.err {
+				font-weight: bold;
+				color: red;
+			}
+
+			.TestOutput.war {
+				font-weight: bold;
+				color: orange;
+			}
+
+			.ApiCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.TestCaseCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body><div id='detail-body'>
+	<div style='float: right;'><img src='../..//provar_logo_400x100.png' height='50'/></div>
+<h2><img src='../..//testcase_16x16.png' style='height: 24; padding-top: 4px;'/> Log a Call.testcase</h2>
+<div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:18:37 (00:00.000)</span></div>Start of Test Case Log a Call.testcase</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:18:37 (00:00.029)</span></div>Start of Test Step Set Values: ActivitySubject</div><div class='TestOutput inf'>Setting value ActivitySubject to Call0AWV</div><div class='TestOutput off'>Successfully set ActivitySubject to Call0AWV</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:18:37 (00:00.059)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:18:37 (00:00.059)</span></div>Start of Test Step Salesforce Connect: SalesForce (Test)</div><div class='TestOutput inf'>Connecting to Salesforce as SalesForce</div><div class='TestOutput off'>Successfully connected to Salesforce as SalesForce</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:18:42 (00:05.594)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:18:42 (00:05.595)</span></div>Start of Test Step On SF Case All Open Cases list view</div><div class='TestOutput inf'>Start of With Screen.  Connection Name: SalesForce, target: sf:ui:target?object=Case&action=List&listView=AllOpenCases</div><div class='TestOutput war'>Failed to connect to Master Lock Manager - assuming dead.  Host: localhost, port: 55036, cause: Connection refused: no further information</div><div class='TestOutput inf'>Opening Chrome webdriver instance to https://login.salesforce.com/</div><div class='TestOutput off'>Successfully opened Chrome webdriver to https://login.salesforce.com/</div><div class='TestOutput inf'>Opening Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Opening Salesforce page.  Object: Case, RelatedList: null, Action: List, Page URL: /lightning/o/500/list?filterName=00BdM000009rAQN, Current URL: chrome://new-tab-page/</div><div class='TestOutput inf'>Opening Salesforce user home page</div><div class='TestOutput off'>Successfully opened user home page</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestOutput inf'>All Sub-Test Steps were successful.</div><div class='TestOutput inf'>Closing Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Main window reselected.  Window: main</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/o/Case/list?filterName=00BdM000009rAQN</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:19:02 (00:25.674)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:19:02 (00:25.675)</span></div>Start of Test Step On SF Case Home screen</div><div class='TestOutput inf'>Start of With Screen.  Connection Name: SalesForce, target: sf:ui:target?object=Case&action=ObjectHome</div><div class='TestOutput inf'>Opening Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Opening Salesforce page.  Object: Case, RelatedList: null, Action: ObjectHome, Page URL: /lightning/o/500/list?filterName=Recent, Current URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/o/Case/list</div><div class='TestOutput inf'>Opening Salesforce user home page</div><div class='TestOutput off'>Successfully opened user home page</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:19:10 (00:33.374)</span></div>Start of Test Step With Case rows {1}</div><div class='TestOutput inf'>Start of With Row.  Connection Name: SalesForce, target: sf:ui:locator:row?table=ObjectHome%2Frecent%2FrecentTable</div><div class='TestOutput inf'>Find element using xpath: //div[contains(@class, 'active') and (contains(@class, 'oneContent') or contains(@class, 'main-content'))]//div[contains(@class, 'listViewContent') or contains(@class, 'listViewContainer')]//tbody//tr</div><div class='TestOutput inf'>Waiting for element to be present.  Timeout(seconds): 10</div><div class='TestOutput inf'>Populating webelement cells into the row  Row Count: 9</div><div class='TestOutput off'>Populated the row elements.</div><div class='TestOutput inf'>Applying row locator to rows.  Row Count: 9, Row Locator: {1}</div><div class='TestOutput off'>The row locator matched 1 row.</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:19:11 (00:33.922)</span></div>Start of Test Step Click the Case field</div><div class='TestOutput inf'>Start of Interact.  Connection: SalesForce, Locator: ui:locator?name=CASES_CASE_NUMBER&binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DCaseNumber, before wait: default, after wait: default, auto retry: ui:wait:autoRetry:timeout=10</div><div class='TestOutput inf'>Locator: ui:locator?name=CASES_CASE_NUMBER&binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DCaseNumber</div><div class='TestOutput inf'>Interaction: ui:interaction?name=action</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/o/Case/list?filterName=Recent</div><div class='TestOutput inf'>Interaction: ui:interaction?name=action</div><div class='TestOutput inf'>Doing before wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Found element: [[[[ChromeDriver$$EnhancerByCGLIB$$dace278c: chrome on windows (2b084688179649f513c3a546fe50cbbf)] -&gt; xpath: //div[contains(@class, 'active') and (contains(@class, 'oneContent') or contains(@class, 'main-content'))]//div[contains(@class, 'listViewContent') or contains(@class, 'listViewContainer')]//tbody//tr]] -&gt; xpath: th//span//*[self::a or self::span[not(contains(@class,'photoContainer') or contains(@class, 'uiImage'))]]]</div><div class='TestOutput inf'>Clicking WebElement using Javascript Click.  WebElement: WebElement [tag: a, text: 00001033, href: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/r/500dM00000J3xDcQAJ/view]</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:19:12 (00:35.650)</span></div>Test Step successful.</div></div><div class='TestOutput inf'>All Sub-Test Steps were successful.</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:19:12 (00:35.677)</span></div>Test Step successful.</div></div><div class='TestOutput inf'>All Sub-Test Steps were successful.</div><div class='TestOutput inf'>Closing Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Main window reselected.  Window: main</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/r/Case/500dM00000J3xDcQAJ/view</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:19:14 (00:37.738)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:19:14 (00:37.739)</span></div>Start of Test Step On SF Case Publisher Action Post screen</div><div class='TestOutput inf'>Start of With Screen.  Connection Name: SalesForce, target: sf:ui:target?object=Case&action=QuickAction&quickAction=FeedItem.TextPost</div><div class='TestOutput inf'>Opening Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Initiating Publisher Action: Post</div><div class='TestOutput inf'>Activating collaborateTab tab</div><div class='TestOutput inf'>Clicking WebElement using Javascript Click.  WebElement: WebElement [tag: a, text: Feed, href: javascript:void(0)]</div><div class='TestOutput inf'>Activating FeedItem.TextPost tab</div><div class='TestOutput inf'>Clicking WebElement using Javascript Click.  WebElement: WebElement [tag: a, text: Post, href: javascript:void(0);]</div><div class='TestOutput inf'>Clicking WebElement using Javascript Click.  WebElement: WebElement [tag: button, text: Share an update...]</div><div class='TestOutput war'>Tab content loading spinners still not invisible</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:20:02 (01:25.292)</span></div>Start of Test Step Set the Publisher Rich Text Editor field to Call0AWV</div><div class='TestOutput inf'>Start of Interact.  Connection: SalesForce, Locator: ui:locator?name=publisherRichTextEditor, before wait: default, after wait: default, auto retry: ui:wait:autoRetry:timeout=10</div><div class='TestOutput inf'>Locator: ui:locator?name=publisherRichTextEditor</div><div class='TestOutput inf'>Interaction: ui:interaction?name=set</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/r/Case/500dM00000J3xDcQAJ/view</div><div class='TestOutput inf'>Interaction: ui:interaction?name=set</div><div class='TestOutput inf'>Doing before wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Found element: [org.openqa.selenium.remote.RemoteWebElement@b2cfa9bc -&gt; unknown locator]</div><div class='TestOutput inf'>Got webElement.  tagName: DIV, id: null, type: null, class: ql-editor ql-blank slds-rich-text-area__content slds-text-color_weak slds-grow</div><div class='TestOutput inf'>Typing value.  tagName: DIV, type: null, value: Call0AWV, blur: false</div><div class='TestOutput inf'>Doing after wait.  waitUrl: default</div><div class='TestOutput inf'>End of &lt;default&gt; wait.</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:20:05 (01:28.143)</span></div>Test Step successful.</div></div><div class='TestOutput inf'>All Sub-Test Steps were successful.</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/r/Case/500dM00000J3xDcQAJ/view</div><div class='TestOutput inf'>Injecting script to get created object ID from aura component</div><div class='TestOutput war'>Some toast message(s) are still open and might cause inconsistent issues in execution.</div><div class='TestOutput inf'>Fetching created Id from URL</div><div class='TestOutput sum'>Storing created Salesforce Object ID.  Result Name: feedItem.TextPostId, created ID: &amp;a href='sf:object?object=Case&id=500dM00000J3xDcQAJ&connection=SalesForce'&gt;500dM00000J3xDcQAJ&amp;/a&gt;, location: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/r/Case/500dM00000J3xDcQAJ/view</div><div class='TestOutput inf'>Logging Salesforce Object Id for clean up.  Object Name: Case, id: 500dM00000J3xDcQAJ</div><div class='TestOutput inf'>Closing Page context.  Name: screen, data: null, frame: null</div><div class='TestOutput inf'>Main window reselected.  Window: main</div><div class='TestOutput inf'>Switched focus to main window.  URL: https://provar-fd-dev-ed.develop.lightning.force.com/lightning/r/Case/500dM00000J3xDcQAJ/view</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:20:14 (01:37.658)</span></div>Test Step successful.</div></div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>12:20:14 (01:37.659)</span></div>Test Case successful.</div></div><div class='TestOutput inf'>Handling managed resource.  Name: SalesForce</div><div class='TestOutput off'>Salesforce Connection handled successfully.  Name: SalesForce</div>
+	</div></body>
+</html>

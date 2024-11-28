@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="4ccd9d99-7c92-430f-9714-d33b0e2a01d6" id="15">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="7aaff868-087f-4c64-ab31-d6528ad8c4fe" name="ApexConnect" testItemId="1" title="Salesforce Connect: SalesForce (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">af2db824-31a2-4483-be7a-5fa76cf39100</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">LightningSales</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexExtractLayout" guid="ccd78fe7-5498-4cec-9cf2-82f5796e6eed" name="ApexExtractLayout" testItemId="2" title="Extract Salesforce Layout=&gt;Account">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="objectName">
+          <value class="value" valueClass="string">Account</value>
+        </argument>
+        <argument id="extractRecordPageLayout">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="extractDynamicFormLayout">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="includeFieldPermissions"/>
+        <argument id="dataUrl">
+          <value class="excelTarget">
+            <workbookPath class="value" valueClass="string">templates/sheet1.xlsx</workbookPath>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexExtractLayout" guid="8c9b9487-65b1-40cd-a188-20f5eee77290" name="ApexExtractLayout" testItemId="3" title="Extract Salesforce Layout=&gt;Account">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">SalesForce</value>
+        </argument>
+        <argument id="objectName">
+          <value class="value" valueClass="string">Account</value>
+        </argument>
+        <argument id="extractRecordPageLayout">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="extractDynamicFormLayout">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="includeFieldPermissions"/>
+        <argument id="dataUrl">
+          <value class="excelTarget">
+            <workbookPath class="value" valueClass="string">templates/sheet2.xlsx</workbookPath>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="9d0e8df1-5172-4261-be24-794ecb1d2152" name="StepGroup" testItemId="7" title="Excel">
+      <tags/>
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Excel</value>
+        </argument>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource variableName="SourceData1" variableScope="Test">
+          <sourceValue class="excelTarget" namesLocation="FirstColumnOfRange" whereComparison="EqualTo">
+            <workbookPath class="value" valueClass="string">templates/sheet1.xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">Account</worksheetName>
+            <valuesRange class="value"/>
+          </sourceValue>
+        </parameterValueSource>
+        <parameterValueSource variableName="SourceData2" variableScope="Test">
+          <sourceValue class="excelTarget" namesLocation="FirstColumnOfRange" whereComparison="EqualTo">
+            <workbookPath class="value" valueClass="string">templates/sheet2.xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">Account</worksheetName>
+            <valuesRange class="value"/>
+          </sourceValue>
+        </parameterValueSource>
+      </parameterValueSources>
+      <clauses>
+        <clause name="hidden" testItemId="8"/>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.string.Match" guid="e519a99a-9c3c-4987-83e9-b3db5026f79c" name="Match" testItemId="9" title="Match: My name is Aniket Pathania=&gt;My (.*) name=&gt;">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="input">
+          <value class="value" valueClass="string">My name is Aniket Pathania</value>
+        </argument>
+        <argument id="regex">
+          <value class="value" valueClass="string">My (.*) name</value>
+        </argument>
+        <argument id="caseInsensitive"/>
+        <argument id="resultName"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.list.ListCompare" guid="8baa53b6-3538-409e-a631-95ec9d752ee7" name="ListCompare" testItemId="4" title="Compare: {SourceData1}=&gt;{SourceData2}">
+      <tags/>
+      <arguments>
+        <argument id="list1">
+          <value class="variable">
+            <path element="SourceData1"/>
+          </value>
+        </argument>
+        <argument id="list2">
+          <value class="variable">
+            <path element="SourceData2"/>
+          </value>
+        </argument>
+        <argument id="matchColumns">
+          <value class="value" valueClass="string">Label</value>
+        </argument>
+        <argument id="compareColumns"/>
+        <argument id="ignoreColumns"/>
+        <argument id="differenceHandling">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="unmatched1Handling">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="unmatched2Handling">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="caseInsensitive">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="0e7070ff-8d2f-43d6-bc84-6147bec1f02b" id="0">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiConnect" guid="009449a3-af90-4fc3-8409-4a50b0febdb9" name="UiConnect" testItemId="1" title="UI Connect: ADOC_ExpCloud">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">ADOC_ExpCloud</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">c6ac3ed4-6cb3-4e0f-9e66-a1f22c63b385</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">ADOC_ExpCloud</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument argId="24697027-49e5-44ce-848e-dd5e257f541a" id="reuseConnectionName">
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="31d39e5d-5a61-42cf-893b-84b21d8eb282" name="UiWithScreen" testItemId="5" title="On hero component">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">ADOC_ExpCloud</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="fact:ui:target?fcPkg=html5&amp;prefixPath=%2Fcom%2Fsite%2Fmy%2Fdevelop%2Fadocinternationalcoltd3-dev-ed&amp;guid=539c5686-c1dd-43cc-8d55-f815b006c72a"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Always</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On hero component</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="uiTargetUrl"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="6">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="26954731-fbd2-40b7-9914-0365e181a52b" name="UiDoAction" testItemId="7" title="Click the Explore field">
+              <arguments>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:locator?name=json%3A%3Aguid%3A%3A6b9c8728-d09a-4f27-8dbd-6407f85915ca&amp;routeBinding=2a6ab02f-465f-4e01-9e30-f8194832cfc0"/>
+                </argument>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=click"/>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="beforeWait">
+                  <value class="uiWait" uri="default"/>
+                </argument>
+                <argument id="afterWait">
+                  <value class="uiWait" uri="default"/>
+                </argument>
+                <argument id="autoRetry">
+                  <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
+                </argument>
+                <argument id="locatorParams"/>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Click the Explore field</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="uiTargetUrl" title="Web Page">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="d2f529d6-d812-4b43-89cc-d53863e8501b" name="UiWithScreen" testItemId="8" title="On account page">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">ADOC_ExpCloud</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.account"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Dont</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On account page</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="uiTargetUrl"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="9">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="bcb708eb-c523-4e9d-802e-495f35fe7218" name="UiAssert" testItemId="10" title="UI Assert">
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="productName">
+                      <fieldLocator uri="ui:pageobject:field?field=productName&amp;pageId=pageobjects.account"/>
+                    </uiFieldAssertion>
+                  </value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="locatorParams"/>
+                <argument id="beforeWait">
+                  <value class="uiWait" uri="default"/>
+                </argument>
+                <argument id="autoRetry">
+                  <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiNavigate" guid="af2b5b45-4444-4c2a-a06f-bcfb5ec0bc80" name="UiNavigate" testItemId="11" title="Navigate: Backward">
+              <arguments>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Backward</value>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="uiTargetUrl" title="Web Page">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="9f84651c-87a0-4355-b598-70d3dbe09a52" name="UiWithScreen" testItemId="12" title="On hero component">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">ADOC_ExpCloud</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="fact:ui:target?fcPkg=html5&amp;prefixPath=%2Fcom%2Fsite%2Fmy%2Fdevelop%2Fadocinternationalcoltd3-dev-ed&amp;guid=539c5686-c1dd-43cc-8d55-f815b006c72a"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Dont</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On hero component</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="uiTargetUrl"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="13">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" guid="e91d05c4-fda1-4e63-9e9d-342d403abaaf" name="UiDoAction" testItemId="14" title="Click the SeeElectricBike field">
+              <arguments>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:locator?name=json%3A%3Aguid%3A%3A48f485f5-405b-44a0-911f-2aa07a0cea6c&amp;routeBinding=8927ddb9-3d0e-4ffe-bab2-7591771462ec"/>
+                </argument>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=click"/>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="beforeWait">
+                  <value class="uiWait" uri="default"/>
+                </argument>
+                <argument id="afterWait">
+                  <value class="uiWait" uri="default"/>
+                </argument>
+                <argument id="autoRetry">
+                  <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
+                </argument>
+                <argument id="locatorParams"/>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Click the SeeElectricBike field</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="uiTargetUrl" title="Web Page">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="2530ff6c-0f7b-4dd7-ae0c-d05da1ce64cf" name="UiWithScreen" testItemId="15" title="On account page">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">ADOC_ExpCloud</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.account"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Dont</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On account page</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="uiTargetUrl"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="16">
+          <steps/>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="uiTargetUrl" title="Web Page">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="deb81f44-9491-4084-8716-5e1c10431ac8" name="UiWithScreen" testItemId="19" title="On hero component">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">ADOC_ExpCloud</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="fact:ui:target?fcPkg=html5&amp;prefixPath=%2Fcom%2Fsite%2Fmy%2Fdevelop%2Fadocinternationalcoltd3-dev-ed&amp;guid=539c5686-c1dd-43cc-8d55-f815b006c72a"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Dont</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On hero component</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="uiTargetUrl"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="20">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="547c4cb2-fb4e-41d9-b5df-2baf345456e7" name="UiAssert" testItemId="21" title="UI Assert">
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="json::guid::f2027dd5-9f94-481b-8d0b-55f63d5836e5">
+                      <fieldLocator uri="ui:locator?name=json%3A%3Aguid%3A%3Af2027dd5-9f94-481b-8d0b-55f63d5836e5&amp;routeBinding=8927ddb9-3d0e-4ffe-bab2-7591771462ec"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="innerText" comparisonType="None"/>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                  </value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="locatorParams"/>
+                <argument id="beforeWait">
+                  <value class="uiWait" uri="default"/>
+                </argument>
+                <argument id="autoRetry">
+                  <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="uiTargetUrl" title="Web Page">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" guid="8055bdcd-276e-413e-8ac1-da66cfcdcb11" name="Sleep" testItemId="22" title="Sleep for {10} seconds">
+      <arguments>
+        <argument id="sleepSecs">
+          <value class="value" valueClass="decimal">10</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.WaitFor" guid="6a9148c0-127e-4b21-baf8-a383f6689c3d" name="WaitFor" testItemId="23" title="Wait For: =&gt;{30}">
+      <arguments>
+        <argument id="condition"/>
+        <argument id="testAtStart"/>
+        <argument id="maxIterations">
+          <value class="value" valueClass="decimal">5</value>
+        </argument>
+        <argument id="sleepSecs">
+          <value class="value" valueClass="decimal">30</value>
+        </argument>
+        <argument id="continueOnFailure"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="24"/>
+      </clauses>
+    </apiCall>
+  </steps>
+  <params/>
+  <args/>
+</testCase>

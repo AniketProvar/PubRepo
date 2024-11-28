@@ -1,0 +1,60 @@
+{
+  "componentId" : "539c5686-c1dd-43cc-8d55-f815b006c72a",
+  "name" : "/com/site/my/develop/adocinternationalcoltd3-dev-ed/hero",
+  "tagName" : "c-hero",
+  "qualifier" : ".[@title='Dynamo X2']",
+  "parameters" : [ {
+    "name" : "title",
+    "value" : "Dynamo X2",
+    "comparisonType" : "equals",
+    "default" : true
+  }, {
+    "name" : "slogan",
+    "value" : "Conquer The Impossible",
+    "comparisonType" : "equals",
+    "default" : true
+  }, {
+    "name" : "buttonText",
+    "value" : "Explore More",
+    "comparisonType" : "equals",
+    "default" : true
+  }, {
+    "name" : "heroDetailsPosition",
+    "value" : "left",
+    "comparisonType" : "equals",
+    "default" : true
+  }, {
+    "name" : "resourceUrl",
+    "value" : "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/ebikes.mp4",
+    "comparisonType" : "equals",
+    "default" : true
+  } ],
+  "type" : "Page",
+  "pageStructureElement" : true,
+  "fieldDetailsElement" : false,
+  "elements" : [ {
+    "componentId" : "2a6ab02f-465f-4e01-9e30-f8194832cfc0",
+    "type" : "component::f7b4b75f-b1f5-4e6a-9516-04d6d1d4520b",
+    "label" : "CHeroDetails",
+    "properties" : [ ],
+    "parameters" : [ {
+      "name" : "title",
+      "value" : "Dynamo X2",
+      "comparisonType" : "equals",
+      "default" : true
+    } ],
+    "elements" : [ ]
+  }, {
+    "componentId" : "8927ddb9-3d0e-4ffe-bab2-7591771462ec",
+    "type" : "component::f7b4b75f-b1f5-4e6a-9516-04d6d1d4520b",
+    "label" : "CHeroDetails",
+    "properties" : [ ],
+    "parameters" : [ {
+      "name" : "title",
+      "value" : "Electra Series",
+      "comparisonType" : "equals",
+      "default" : true
+    } ],
+    "elements" : [ ]
+  } ]
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="7989aded-6c8d-487b-93d1-097235ecfb9d" id="0">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.GenerateTestCase" guid="807b5d05-a3e7-436b-963a-6d49502dbe8c" name="GenerateTestCase" testItemId="1" title="Generate Test Case: ⇒ ">
+      <arguments>
+        <argument id="objectsName">
+          <value class="value" valueClass="string">Account</value>
+        </argument>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">OAuth</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

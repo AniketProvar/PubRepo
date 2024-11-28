@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testPlanInstance guid="73f555af-645c-4900-9ae6-9810c58f50b7" testCaseId="70dc0faa-d5ce-409c-9b8a-026711e3fc21" testCasePath="tests/Salesforce/Createcontacts.testcase">
+  <planSettings/>
+  <planFeatures/>
+  <associations>
+    <association assocationType="TM.TEST_SUITE_CASE" connectionId="fc916926-8ad9-4e9e-955c-c571f2019341" entityKey="a14dM000009Us4JQAS"/>
+  </associations>
+</testPlanInstance>
